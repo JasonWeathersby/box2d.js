@@ -6,7 +6,7 @@
 # For placing path overrides.. this path is hidden from git
 -include Makefile.local
 
-LATEST =  Box2D_v2.3.1
+LATEST =  Box2D_v2.3.1b
 STABLE =  Box2D_v2.2.1
 PYTHON=$(ENV) python
 VERSION := stable
@@ -14,10 +14,10 @@ BUILD := min
 
 ifeq ($(BUILD), debug)
 	OPTS = -O0 -g2
-	LINK_OPTS = -g4 --llvm-lto 0 -s NO_FILESYSTEM=1 -s NO_BROWSER=1 -s ASSERTIONS=2 --closure 0  -s DEMANGLE_SUPPORT=1 
+	LINK_OPTS = -g4 --llvm-lto 0 -s NO_FILESYSTEM=1 -s NO_BROWSER=1 -s -s WASM=1 -s ASSERTIONS=2 --closure 0  -s DEMANGLE_SUPPORT=1 
 else
 	OPTS = -Os
-	LINK_OPTS =  -O3 --llvm-lto 1 -s NO_FILESYSTEM=1 -s NO_BROWSER=1  --closure 1  --js-transform "python bundle.py"
+	LINK_OPTS =  -O3 --llvm-lto 1 -s NO_FILESYSTEM=1 -s NO_BROWSER=1  -s WASM=1 -s BINARYEN_IMPRECISE=1 --closure 1  --js-transform "python bundle.py"
 endif
 
 ifeq ($(VERSION), latest)

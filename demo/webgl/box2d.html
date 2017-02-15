@@ -5,14 +5,14 @@
       <script>
         var Module = { TOTAL_MEMORY: 256*1024*1024 };
       </script>
-      <script src="../../build/Box2D_v2.2.1_min.js" type="text/javascript"></script>
+      <script src="../../build/Box2D_v2.3.1_min.js" type="text/javascript"></script>
       <style type="text/css">
         body { background-color: #ccc; }
       </style>
 
       <script type="text/javascript">
         var startUp, restart;
-        (function() {
+        var init=function() {
           var s = window.location.search.substr(1);
           var NUM = s.length > 1 ? +s : 500;
 
@@ -226,10 +226,29 @@
               showFPS(dt);
             });
           }
-        })();
+        };
       </script>
+      
+      <script type='text/javascript'>
+  var Module = {};
+  fetch('../../build/Box2D_v2.3.1b_min.wasm')
+    .then(response => response.arrayBuffer())
+    .then(buffer => {
+      Module.wasmBinary = buffer;
+      var script = document.createElement('script');
+      script.src = "../../build/Box2D_v2.3.1b_min.js";
+      script.onload = function() {
+        console.log("Emscripten boilerplate loaded.")
+
+				init();      
+        startUp();
+      }
+      document.body.appendChild(script);
+    });
+</script>
+      
     </head>
-    <body onload="startUp()">
+    <body>
       <center>
         <h2>box2d.js WebGL Demo</h2>
         <form>

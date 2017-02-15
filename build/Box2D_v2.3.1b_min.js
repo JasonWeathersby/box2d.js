@@ -1503,9 +1503,9 @@ function integrateWasmJS(Module) {
   var method = Module['wasmJSMethod'] || 'native-wasm';
   Module['wasmJSMethod'] = method;
 
-  var wasmTextFile = Module['wasmTextFile'] || 'Box2D_v2.2.1_min.wast';
-  var wasmBinaryFile = Module['wasmBinaryFile'] || 'Box2D_v2.2.1_min.wasm';
-  var asmjsCodeFile = Module['asmjsCodeFile'] || 'Box2D_v2.2.1_min.asm.js';
+  var wasmTextFile = Module['wasmTextFile'] || 'Box2D_v2.3.1b_min.wast';
+  var wasmBinaryFile = Module['wasmBinaryFile'] || 'Box2D_v2.3.1b_min.wasm';
+  var asmjsCodeFile = Module['asmjsCodeFile'] || 'Box2D_v2.3.1b_min.asm.js';
 
   // utilities
 
@@ -1869,16 +1869,16 @@ function _emscripten_asm_const_iii(code, a0, a1) {
 
 STATIC_BASE = 1024;
 
-STATICTOP = STATIC_BASE + 22736;
+STATICTOP = STATIC_BASE + 23232;
   /* global initializers */  __ATINIT__.push();
   
 
-memoryInitializer = Module["wasmJSMethod"].indexOf("asmjs") >= 0 || Module["wasmJSMethod"].indexOf("interpret-asm2wasm") >= 0 ? "Box2D_v2.2.1_min.js.mem" : null;
+memoryInitializer = Module["wasmJSMethod"].indexOf("asmjs") >= 0 || Module["wasmJSMethod"].indexOf("interpret-asm2wasm") >= 0 ? "Box2D_v2.3.1b_min.js.mem" : null;
 
 
 
 
-var STATIC_BUMP = 22736;
+var STATIC_BUMP = 23232;
 Module["STATIC_BASE"] = STATIC_BASE;
 Module["STATIC_BUMP"] = STATIC_BUMP;
 
@@ -2420,6 +2420,7 @@ var _emscripten_bind_JSDraw_DrawSolidCircle_4 = Module["_emscripten_bind_JSDraw_
 var _emscripten_bind_b2RevoluteJoint_GetLocalAnchorA_0 = Module["_emscripten_bind_b2RevoluteJoint_GetLocalAnchorA_0"] = asm["_emscripten_bind_b2RevoluteJoint_GetLocalAnchorA_0"];
 var _emscripten_bind_b2FixtureDef_get_filter_0 = Module["_emscripten_bind_b2FixtureDef_get_filter_0"] = asm["_emscripten_bind_b2FixtureDef_get_filter_0"];
 var _emscripten_bind_b2FrictionJointDef_get_type_0 = Module["_emscripten_bind_b2FrictionJointDef_get_type_0"] = asm["_emscripten_bind_b2FrictionJointDef_get_type_0"];
+var _emscripten_bind_b2MotorJointDef_set_type_1 = Module["_emscripten_bind_b2MotorJointDef_set_type_1"] = asm["_emscripten_bind_b2MotorJointDef_set_type_1"];
 var _emscripten_bind_b2FixtureDef_set_userData_1 = Module["_emscripten_bind_b2FixtureDef_set_userData_1"] = asm["_emscripten_bind_b2FixtureDef_set_userData_1"];
 var _emscripten_bind_b2EdgeShape_set_m_hasVertex3_1 = Module["_emscripten_bind_b2EdgeShape_set_m_hasVertex3_1"] = asm["_emscripten_bind_b2EdgeShape_set_m_hasVertex3_1"];
 var _emscripten_bind_b2JointEdge_set_joint_1 = Module["_emscripten_bind_b2JointEdge_set_joint_1"] = asm["_emscripten_bind_b2JointEdge_set_joint_1"];
@@ -2432,6 +2433,7 @@ var _emscripten_bind_b2BodyDef_set_type_1 = Module["_emscripten_bind_b2BodyDef_s
 var _emscripten_bind_b2ChainShape_ComputeAABB_3 = Module["_emscripten_bind_b2ChainShape_ComputeAABB_3"] = asm["_emscripten_bind_b2ChainShape_ComputeAABB_3"];
 var _emscripten_bind_b2PulleyJoint_GetUserData_0 = Module["_emscripten_bind_b2PulleyJoint_GetUserData_0"] = asm["_emscripten_bind_b2PulleyJoint_GetUserData_0"];
 var _emscripten_bind_b2WeldJoint_GetReactionTorque_1 = Module["_emscripten_bind_b2WeldJoint_GetReactionTorque_1"] = asm["_emscripten_bind_b2WeldJoint_GetReactionTorque_1"];
+var _emscripten_bind_b2MotorJointDef_get_maxForce_0 = Module["_emscripten_bind_b2MotorJointDef_get_maxForce_0"] = asm["_emscripten_bind_b2MotorJointDef_get_maxForce_0"];
 var _emscripten_bind_b2DistanceJointDef_get_userData_0 = Module["_emscripten_bind_b2DistanceJointDef_get_userData_0"] = asm["_emscripten_bind_b2DistanceJointDef_get_userData_0"];
 var _emscripten_bind_b2BodyDef_get_position_0 = Module["_emscripten_bind_b2BodyDef_get_position_0"] = asm["_emscripten_bind_b2BodyDef_get_position_0"];
 var _emscripten_bind_b2RevoluteJointDef_set_userData_1 = Module["_emscripten_bind_b2RevoluteJointDef_set_userData_1"] = asm["_emscripten_bind_b2RevoluteJointDef_set_userData_1"];
@@ -2470,26 +2472,30 @@ var _emscripten_bind_b2FrictionJointDef_get_maxTorque_0 = Module["_emscripten_bi
 var _emscripten_bind_JSQueryCallback_JSQueryCallback_0 = Module["_emscripten_bind_JSQueryCallback_JSQueryCallback_0"] = asm["_emscripten_bind_JSQueryCallback_JSQueryCallback_0"];
 var _emscripten_bind_b2World_SetAutoClearForces_1 = Module["_emscripten_bind_b2World_SetAutoClearForces_1"] = asm["_emscripten_bind_b2World_SetAutoClearForces_1"];
 var _emscripten_bind_b2PrismaticJointDef_set_lowerTranslation_1 = Module["_emscripten_bind_b2PrismaticJointDef_set_lowerTranslation_1"] = asm["_emscripten_bind_b2PrismaticJointDef_set_lowerTranslation_1"];
+var _emscripten_bind_b2Contact_GetTangentSpeed_0 = Module["_emscripten_bind_b2Contact_GetTangentSpeed_0"] = asm["_emscripten_bind_b2Contact_GetTangentSpeed_0"];
 var _emscripten_bind_b2BodyDef_set_position_1 = Module["_emscripten_bind_b2BodyDef_set_position_1"] = asm["_emscripten_bind_b2BodyDef_set_position_1"];
 var _emscripten_bind_b2Transform_get_q_0 = Module["_emscripten_bind_b2Transform_get_q_0"] = asm["_emscripten_bind_b2Transform_get_q_0"];
-var _emscripten_bind_b2ChainShape_GetChildCount_0 = Module["_emscripten_bind_b2ChainShape_GetChildCount_0"] = asm["_emscripten_bind_b2ChainShape_GetChildCount_0"];
+var _emscripten_bind_b2PolygonShape_set_m_count_1 = Module["_emscripten_bind_b2PolygonShape_set_m_count_1"] = asm["_emscripten_bind_b2PolygonShape_set_m_count_1"];
 var _emscripten_bind_b2Contact_GetNext_0 = Module["_emscripten_bind_b2Contact_GetNext_0"] = asm["_emscripten_bind_b2Contact_GetNext_0"];
+var _emscripten_bind_b2MotorJointDef_set_userData_1 = Module["_emscripten_bind_b2MotorJointDef_set_userData_1"] = asm["_emscripten_bind_b2MotorJointDef_set_userData_1"];
 var _emscripten_bind_b2GearJoint_GetJoint1_0 = Module["_emscripten_bind_b2GearJoint_GetJoint1_0"] = asm["_emscripten_bind_b2GearJoint_GetJoint1_0"];
 var _emscripten_bind_b2World_GetProxyCount_0 = Module["_emscripten_bind_b2World_GetProxyCount_0"] = asm["_emscripten_bind_b2World_GetProxyCount_0"];
-var _emscripten_enum_b2ContactFeatureType_e_face = Module["_emscripten_enum_b2ContactFeatureType_e_face"] = asm["_emscripten_enum_b2ContactFeatureType_e_face"];
+var _emscripten_bind_b2MotorJoint_SetMaxTorque_1 = Module["_emscripten_bind_b2MotorJoint_SetMaxTorque_1"] = asm["_emscripten_bind_b2MotorJoint_SetMaxTorque_1"];
 var _emscripten_bind_b2GearJoint_GetAnchorA_0 = Module["_emscripten_bind_b2GearJoint_GetAnchorA_0"] = asm["_emscripten_bind_b2GearJoint_GetAnchorA_0"];
 var _emscripten_bind_b2MouseJointDef_set_bodyA_1 = Module["_emscripten_bind_b2MouseJointDef_set_bodyA_1"] = asm["_emscripten_bind_b2MouseJointDef_set_bodyA_1"];
 var _emscripten_bind_b2World_SetContactListener_1 = Module["_emscripten_bind_b2World_SetContactListener_1"] = asm["_emscripten_bind_b2World_SetContactListener_1"];
 var _emscripten_bind_b2Body_IsAwake_0 = Module["_emscripten_bind_b2Body_IsAwake_0"] = asm["_emscripten_bind_b2Body_IsAwake_0"];
 var _emscripten_bind_b2JointEdge_set_other_1 = Module["_emscripten_bind_b2JointEdge_set_other_1"] = asm["_emscripten_bind_b2JointEdge_set_other_1"];
 var _emscripten_bind_b2MouseJointDef_set_target_1 = Module["_emscripten_bind_b2MouseJointDef_set_target_1"] = asm["_emscripten_bind_b2MouseJointDef_set_target_1"];
-var _emscripten_bind_b2FrictionJoint_GetLocalAnchorB_0 = Module["_emscripten_bind_b2FrictionJoint_GetLocalAnchorB_0"] = asm["_emscripten_bind_b2FrictionJoint_GetLocalAnchorB_0"];
-var _emscripten_bind_b2RopeJointDef___destroy___0 = Module["_emscripten_bind_b2RopeJointDef___destroy___0"] = asm["_emscripten_bind_b2RopeJointDef___destroy___0"];
+var _emscripten_bind_b2MotorJoint_SetCorrectionFactor_1 = Module["_emscripten_bind_b2MotorJoint_SetCorrectionFactor_1"] = asm["_emscripten_bind_b2MotorJoint_SetCorrectionFactor_1"];
+var _emscripten_bind_b2FixtureDef_get_density_0 = Module["_emscripten_bind_b2FixtureDef_get_density_0"] = asm["_emscripten_bind_b2FixtureDef_get_density_0"];
 var _emscripten_bind_b2GearJoint_GetRatio_0 = Module["_emscripten_bind_b2GearJoint_GetRatio_0"] = asm["_emscripten_bind_b2GearJoint_GetRatio_0"];
 var _emscripten_bind_b2PrismaticJointDef_get_upperTranslation_0 = Module["_emscripten_bind_b2PrismaticJointDef_get_upperTranslation_0"] = asm["_emscripten_bind_b2PrismaticJointDef_get_upperTranslation_0"];
 var _emscripten_bind_b2RevoluteJoint_GetReferenceAngle_0 = Module["_emscripten_bind_b2RevoluteJoint_GetReferenceAngle_0"] = asm["_emscripten_bind_b2RevoluteJoint_GetReferenceAngle_0"];
+var _emscripten_bind_b2MotorJointDef_get_collideConnected_0 = Module["_emscripten_bind_b2MotorJointDef_get_collideConnected_0"] = asm["_emscripten_bind_b2MotorJointDef_get_collideConnected_0"];
 var _emscripten_enum_b2ManifoldType_e_circles = Module["_emscripten_enum_b2ManifoldType_e_circles"] = asm["_emscripten_enum_b2ManifoldType_e_circles"];
 var _emscripten_bind_b2PulleyJointDef_set_localAnchorB_1 = Module["_emscripten_bind_b2PulleyJointDef_set_localAnchorB_1"] = asm["_emscripten_bind_b2PulleyJointDef_set_localAnchorB_1"];
+var _emscripten_bind_b2RevoluteJointDef_Initialize_3 = Module["_emscripten_bind_b2RevoluteJointDef_Initialize_3"] = asm["_emscripten_bind_b2RevoluteJointDef_Initialize_3"];
 var _emscripten_bind_b2FixtureDef_get_userData_0 = Module["_emscripten_bind_b2FixtureDef_get_userData_0"] = asm["_emscripten_bind_b2FixtureDef_get_userData_0"];
 var _emscripten_bind_b2DistanceJoint_GetUserData_0 = Module["_emscripten_bind_b2DistanceJoint_GetUserData_0"] = asm["_emscripten_bind_b2DistanceJoint_GetUserData_0"];
 var _emscripten_bind_b2FrictionJointDef_set_collideConnected_1 = Module["_emscripten_bind_b2FrictionJointDef_set_collideConnected_1"] = asm["_emscripten_bind_b2FrictionJointDef_set_collideConnected_1"];
@@ -2497,10 +2503,11 @@ var _emscripten_bind_b2PrismaticJointDef_get_lowerTranslation_0 = Module["_emscr
 var _emscripten_bind_b2GearJoint_GetCollideConnected_0 = Module["_emscripten_bind_b2GearJoint_GetCollideConnected_0"] = asm["_emscripten_bind_b2GearJoint_GetCollideConnected_0"];
 var _emscripten_bind_b2Filter_b2Filter_0 = Module["_emscripten_bind_b2Filter_b2Filter_0"] = asm["_emscripten_bind_b2Filter_b2Filter_0"];
 var _emscripten_bind_b2MouseJointDef_set_type_1 = Module["_emscripten_bind_b2MouseJointDef_set_type_1"] = asm["_emscripten_bind_b2MouseJointDef_set_type_1"];
+var _emscripten_bind_b2Body_ApplyAngularImpulse_2 = Module["_emscripten_bind_b2Body_ApplyAngularImpulse_2"] = asm["_emscripten_bind_b2Body_ApplyAngularImpulse_2"];
 var _emscripten_enum_b2JointType_e_frictionJoint = Module["_emscripten_enum_b2JointType_e_frictionJoint"] = asm["_emscripten_enum_b2JointType_e_frictionJoint"];
-var _emscripten_bind_b2Body_ApplyAngularImpulse_1 = Module["_emscripten_bind_b2Body_ApplyAngularImpulse_1"] = asm["_emscripten_bind_b2Body_ApplyAngularImpulse_1"];
+var _emscripten_bind_b2RayCastOutput_set_fraction_1 = Module["_emscripten_bind_b2RayCastOutput_set_fraction_1"] = asm["_emscripten_bind_b2RayCastOutput_set_fraction_1"];
 var _emscripten_bind_b2Color_set_r_1 = Module["_emscripten_bind_b2Color_set_r_1"] = asm["_emscripten_bind_b2Color_set_r_1"];
-var _emscripten_bind_b2DistanceJointDef_set_collideConnected_1 = Module["_emscripten_bind_b2DistanceJointDef_set_collideConnected_1"] = asm["_emscripten_bind_b2DistanceJointDef_set_collideConnected_1"];
+var _emscripten_bind_b2DistanceJointDef_get_length_0 = Module["_emscripten_bind_b2DistanceJointDef_get_length_0"] = asm["_emscripten_bind_b2DistanceJointDef_get_length_0"];
 var _emscripten_bind_b2PulleyJoint_GetBodyB_0 = Module["_emscripten_bind_b2PulleyJoint_GetBodyB_0"] = asm["_emscripten_bind_b2PulleyJoint_GetBodyB_0"];
 var _emscripten_bind_b2WheelJointDef_set_type_1 = Module["_emscripten_bind_b2WheelJointDef_set_type_1"] = asm["_emscripten_bind_b2WheelJointDef_set_type_1"];
 var _emscripten_bind_b2World_GetTreeQuality_0 = Module["_emscripten_bind_b2World_GetTreeQuality_0"] = asm["_emscripten_bind_b2World_GetTreeQuality_0"];
@@ -2509,7 +2516,7 @@ var _emscripten_bind_b2RopeJointDef_set_bodyB_1 = Module["_emscripten_bind_b2Rop
 var _emscripten_bind_b2PrismaticJoint_GetLowerLimit_0 = Module["_emscripten_bind_b2PrismaticJoint_GetLowerLimit_0"] = asm["_emscripten_bind_b2PrismaticJoint_GetLowerLimit_0"];
 var _emscripten_bind_b2AABB_get_lowerBound_0 = Module["_emscripten_bind_b2AABB_get_lowerBound_0"] = asm["_emscripten_bind_b2AABB_get_lowerBound_0"];
 var _emscripten_bind_b2WheelJoint_SetMotorSpeed_1 = Module["_emscripten_bind_b2WheelJoint_SetMotorSpeed_1"] = asm["_emscripten_bind_b2WheelJoint_SetMotorSpeed_1"];
-var _emscripten_bind_b2MouseJoint_GetMaxForce_0 = Module["_emscripten_bind_b2MouseJoint_GetMaxForce_0"] = asm["_emscripten_bind_b2MouseJoint_GetMaxForce_0"];
+var _emscripten_bind_b2PrismaticJointDef_get_referenceAngle_0 = Module["_emscripten_bind_b2PrismaticJointDef_get_referenceAngle_0"] = asm["_emscripten_bind_b2PrismaticJointDef_get_referenceAngle_0"];
 var _emscripten_bind_b2Body_SetMassData_1 = Module["_emscripten_bind_b2Body_SetMassData_1"] = asm["_emscripten_bind_b2Body_SetMassData_1"];
 var _emscripten_bind_b2BodyDef_get_angularVelocity_0 = Module["_emscripten_bind_b2BodyDef_get_angularVelocity_0"] = asm["_emscripten_bind_b2BodyDef_get_angularVelocity_0"];
 var _emscripten_bind_b2WeldJoint_SetDampingRatio_1 = Module["_emscripten_bind_b2WeldJoint_SetDampingRatio_1"] = asm["_emscripten_bind_b2WeldJoint_SetDampingRatio_1"];
@@ -2532,6 +2539,7 @@ var _emscripten_bind_b2CircleShape_set_m_radius_1 = Module["_emscripten_bind_b2C
 var _emscripten_bind_b2EdgeShape_set_m_hasVertex0_1 = Module["_emscripten_bind_b2EdgeShape_set_m_hasVertex0_1"] = asm["_emscripten_bind_b2EdgeShape_set_m_hasVertex0_1"];
 var _emscripten_bind_b2RopeJoint_GetMaxLength_0 = Module["_emscripten_bind_b2RopeJoint_GetMaxLength_0"] = asm["_emscripten_bind_b2RopeJoint_GetMaxLength_0"];
 var _emscripten_bind_b2GearJoint_GetUserData_0 = Module["_emscripten_bind_b2GearJoint_GetUserData_0"] = asm["_emscripten_bind_b2GearJoint_GetUserData_0"];
+var _emscripten_bind_b2MotorJoint_GetCollideConnected_0 = Module["_emscripten_bind_b2MotorJoint_GetCollideConnected_0"] = asm["_emscripten_bind_b2MotorJoint_GetCollideConnected_0"];
 var _emscripten_bind_b2GearJointDef_set_type_1 = Module["_emscripten_bind_b2GearJointDef_set_type_1"] = asm["_emscripten_bind_b2GearJointDef_set_type_1"];
 var _emscripten_bind_b2DistanceJoint_SetDampingRatio_1 = Module["_emscripten_bind_b2DistanceJoint_SetDampingRatio_1"] = asm["_emscripten_bind_b2DistanceJoint_SetDampingRatio_1"];
 var _emscripten_bind_b2Contact_GetFixtureA_0 = Module["_emscripten_bind_b2Contact_GetFixtureA_0"] = asm["_emscripten_bind_b2Contact_GetFixtureA_0"];
@@ -2546,7 +2554,8 @@ var _emscripten_bind_b2ContactImpulse___destroy___0 = Module["_emscripten_bind_b
 var _emscripten_bind_b2FrictionJointDef_get_localAnchorB_0 = Module["_emscripten_bind_b2FrictionJointDef_get_localAnchorB_0"] = asm["_emscripten_bind_b2FrictionJointDef_get_localAnchorB_0"];
 var _emscripten_bind_b2PulleyJointDef_set_lengthB_1 = Module["_emscripten_bind_b2PulleyJointDef_set_lengthB_1"] = asm["_emscripten_bind_b2PulleyJointDef_set_lengthB_1"];
 var _emscripten_bind_b2RayCastInput___destroy___0 = Module["_emscripten_bind_b2RayCastInput___destroy___0"] = asm["_emscripten_bind_b2RayCastInput___destroy___0"];
-var _emscripten_bind_b2Body_ApplyForceToCenter_1 = Module["_emscripten_bind_b2Body_ApplyForceToCenter_1"] = asm["_emscripten_bind_b2Body_ApplyForceToCenter_1"];
+var _emscripten_bind_b2Body_ApplyForceToCenter_2 = Module["_emscripten_bind_b2Body_ApplyForceToCenter_2"] = asm["_emscripten_bind_b2Body_ApplyForceToCenter_2"];
+var _emscripten_bind_JSDestructionListener_JSDestructionListener_0 = Module["_emscripten_bind_JSDestructionListener_JSDestructionListener_0"] = asm["_emscripten_bind_JSDestructionListener_JSDestructionListener_0"];
 var _emscripten_bind_b2WheelJointDef_set_localAnchorA_1 = Module["_emscripten_bind_b2WheelJointDef_set_localAnchorA_1"] = asm["_emscripten_bind_b2WheelJointDef_set_localAnchorA_1"];
 var _emscripten_bind_b2FrictionJoint_GetBodyB_0 = Module["_emscripten_bind_b2FrictionJoint_GetBodyB_0"] = asm["_emscripten_bind_b2FrictionJoint_GetBodyB_0"];
 var _emscripten_bind_b2WeldJointDef_set_bodyA_1 = Module["_emscripten_bind_b2WeldJointDef_set_bodyA_1"] = asm["_emscripten_bind_b2WeldJointDef_set_bodyA_1"];
@@ -2567,6 +2576,7 @@ var _emscripten_bind_b2World_SetSubStepping_1 = Module["_emscripten_bind_b2World
 var _emscripten_bind_b2Vec2_op_add_1 = Module["_emscripten_bind_b2Vec2_op_add_1"] = asm["_emscripten_bind_b2Vec2_op_add_1"];
 var _emscripten_bind_JSDraw_DrawSegment_3 = Module["_emscripten_bind_JSDraw_DrawSegment_3"] = asm["_emscripten_bind_JSDraw_DrawSegment_3"];
 var _emscripten_bind_b2Joint_GetCollideConnected_0 = Module["_emscripten_bind_b2Joint_GetCollideConnected_0"] = asm["_emscripten_bind_b2Joint_GetCollideConnected_0"];
+var _emscripten_bind_b2MotorJoint_GetReactionTorque_1 = Module["_emscripten_bind_b2MotorJoint_GetReactionTorque_1"] = asm["_emscripten_bind_b2MotorJoint_GetReactionTorque_1"];
 var _emscripten_bind_b2FrictionJointDef_get_bodyB_0 = Module["_emscripten_bind_b2FrictionJointDef_get_bodyB_0"] = asm["_emscripten_bind_b2FrictionJointDef_get_bodyB_0"];
 var _emscripten_bind_b2WheelJointDef___destroy___0 = Module["_emscripten_bind_b2WheelJointDef___destroy___0"] = asm["_emscripten_bind_b2WheelJointDef___destroy___0"];
 var _emscripten_bind_b2BodyDef_get_gravityScale_0 = Module["_emscripten_bind_b2BodyDef_get_gravityScale_0"] = asm["_emscripten_bind_b2BodyDef_get_gravityScale_0"];
@@ -2592,7 +2602,6 @@ var _emscripten_bind_b2WeldJoint_GetBodyA_0 = Module["_emscripten_bind_b2WeldJoi
 var _emscripten_enum_b2DrawFlag_e_jointBit = Module["_emscripten_enum_b2DrawFlag_e_jointBit"] = asm["_emscripten_enum_b2DrawFlag_e_jointBit"];
 var _emscripten_bind_b2FixtureDef_get_isSensor_0 = Module["_emscripten_bind_b2FixtureDef_get_isSensor_0"] = asm["_emscripten_bind_b2FixtureDef_get_isSensor_0"];
 var _emscripten_bind_b2PrismaticJointDef_Initialize_4 = Module["_emscripten_bind_b2PrismaticJointDef_Initialize_4"] = asm["_emscripten_bind_b2PrismaticJointDef_Initialize_4"];
-var _emscripten_bind_b2Fixture_TestPoint_1 = Module["_emscripten_bind_b2Fixture_TestPoint_1"] = asm["_emscripten_bind_b2Fixture_TestPoint_1"];
 var _emscripten_bind_b2PulleyJointDef_set_bodyB_1 = Module["_emscripten_bind_b2PulleyJointDef_set_bodyB_1"] = asm["_emscripten_bind_b2PulleyJointDef_set_bodyB_1"];
 var _emscripten_bind_b2WheelJoint_EnableMotor_1 = Module["_emscripten_bind_b2WheelJoint_EnableMotor_1"] = asm["_emscripten_bind_b2WheelJoint_EnableMotor_1"];
 var _emscripten_bind_b2RevoluteJoint_GetJointSpeed_0 = Module["_emscripten_bind_b2RevoluteJoint_GetJointSpeed_0"] = asm["_emscripten_bind_b2RevoluteJoint_GetJointSpeed_0"];
@@ -2608,6 +2617,7 @@ var _emscripten_bind_b2WheelJoint_GetLocalAnchorA_0 = Module["_emscripten_bind_b
 var _emscripten_bind_b2ChainShape_set_m_hasPrevVertex_1 = Module["_emscripten_bind_b2ChainShape_set_m_hasPrevVertex_1"] = asm["_emscripten_bind_b2ChainShape_set_m_hasPrevVertex_1"];
 var _emscripten_bind_b2DistanceJoint_SetUserData_1 = Module["_emscripten_bind_b2DistanceJoint_SetUserData_1"] = asm["_emscripten_bind_b2DistanceJoint_SetUserData_1"];
 var _emscripten_bind_b2PrismaticJoint___destroy___0 = Module["_emscripten_bind_b2PrismaticJoint___destroy___0"] = asm["_emscripten_bind_b2PrismaticJoint___destroy___0"];
+var _emscripten_bind_b2RopeJointDef_set_bodyA_1 = Module["_emscripten_bind_b2RopeJointDef_set_bodyA_1"] = asm["_emscripten_bind_b2RopeJointDef_set_bodyA_1"];
 var _emscripten_bind_b2GearJoint___destroy___0 = Module["_emscripten_bind_b2GearJoint___destroy___0"] = asm["_emscripten_bind_b2GearJoint___destroy___0"];
 var _emscripten_bind_b2PrismaticJoint_GetJointTranslation_0 = Module["_emscripten_bind_b2PrismaticJoint_GetJointTranslation_0"] = asm["_emscripten_bind_b2PrismaticJoint_GetJointTranslation_0"];
 var _emscripten_bind_b2ManifoldPoint_get_id_0 = Module["_emscripten_bind_b2ManifoldPoint_get_id_0"] = asm["_emscripten_bind_b2ManifoldPoint_get_id_0"];
@@ -2616,12 +2626,12 @@ var _emscripten_bind_b2PrismaticJoint_GetMotorSpeed_0 = Module["_emscripten_bind
 var _emscripten_bind_b2PulleyJoint_GetGroundAnchorB_0 = Module["_emscripten_bind_b2PulleyJoint_GetGroundAnchorB_0"] = asm["_emscripten_bind_b2PulleyJoint_GetGroundAnchorB_0"];
 var _emscripten_bind_b2Vec3_op_add_1 = Module["_emscripten_bind_b2Vec3_op_add_1"] = asm["_emscripten_bind_b2Vec3_op_add_1"];
 var _emscripten_bind_b2FrictionJoint_GetType_0 = Module["_emscripten_bind_b2FrictionJoint_GetType_0"] = asm["_emscripten_bind_b2FrictionJoint_GetType_0"];
-var _emscripten_bind_b2ContactFeature_get_indexB_0 = Module["_emscripten_bind_b2ContactFeature_get_indexB_0"] = asm["_emscripten_bind_b2ContactFeature_get_indexB_0"];
+var _emscripten_bind_b2MouseJoint_GetMaxForce_0 = Module["_emscripten_bind_b2MouseJoint_GetMaxForce_0"] = asm["_emscripten_bind_b2MouseJoint_GetMaxForce_0"];
 var _emscripten_bind_b2MouseJoint_SetTarget_1 = Module["_emscripten_bind_b2MouseJoint_SetTarget_1"] = asm["_emscripten_bind_b2MouseJoint_SetTarget_1"];
 var _emscripten_bind_b2MouseJointDef_get_dampingRatio_0 = Module["_emscripten_bind_b2MouseJointDef_get_dampingRatio_0"] = asm["_emscripten_bind_b2MouseJointDef_get_dampingRatio_0"];
 var _emscripten_bind_b2RevoluteJoint_GetMotorSpeed_0 = Module["_emscripten_bind_b2RevoluteJoint_GetMotorSpeed_0"] = asm["_emscripten_bind_b2RevoluteJoint_GetMotorSpeed_0"];
 var _emscripten_bind_b2ChainShape_set_m_type_1 = Module["_emscripten_bind_b2ChainShape_set_m_type_1"] = asm["_emscripten_bind_b2ChainShape_set_m_type_1"];
-var _emscripten_bind_b2Contact_GetFriction_0 = Module["_emscripten_bind_b2Contact_GetFriction_0"] = asm["_emscripten_bind_b2Contact_GetFriction_0"];
+var _emscripten_bind_b2RevoluteJointDef_set_bodyB_1 = Module["_emscripten_bind_b2RevoluteJointDef_set_bodyB_1"] = asm["_emscripten_bind_b2RevoluteJointDef_set_bodyB_1"];
 var _emscripten_bind_b2Rot_GetXAxis_0 = Module["_emscripten_bind_b2Rot_GetXAxis_0"] = asm["_emscripten_bind_b2Rot_GetXAxis_0"];
 var _emscripten_bind_b2Mat33_b2Mat33_0 = Module["_emscripten_bind_b2Mat33_b2Mat33_0"] = asm["_emscripten_bind_b2Mat33_b2Mat33_0"];
 var _emscripten_bind_b2MouseJointDef_get_bodyB_0 = Module["_emscripten_bind_b2MouseJointDef_get_bodyB_0"] = asm["_emscripten_bind_b2MouseJointDef_get_bodyB_0"];
@@ -2646,6 +2656,7 @@ var _emscripten_bind_b2WheelJointDef_get_maxMotorTorque_0 = Module["_emscripten_
 var _emscripten_bind_b2Vec2_op_sub_1 = Module["_emscripten_bind_b2Vec2_op_sub_1"] = asm["_emscripten_bind_b2Vec2_op_sub_1"];
 var _emscripten_bind_b2CircleShape_get_m_p_0 = Module["_emscripten_bind_b2CircleShape_get_m_p_0"] = asm["_emscripten_bind_b2CircleShape_get_m_p_0"];
 var _emscripten_bind_b2ContactFeature_get_indexA_0 = Module["_emscripten_bind_b2ContactFeature_get_indexA_0"] = asm["_emscripten_bind_b2ContactFeature_get_indexA_0"];
+var _emscripten_bind_b2MotorJointDef_b2MotorJointDef_0 = Module["_emscripten_bind_b2MotorJointDef_b2MotorJointDef_0"] = asm["_emscripten_bind_b2MotorJointDef_b2MotorJointDef_0"];
 var _emscripten_bind_b2RevoluteJoint_EnableLimit_1 = Module["_emscripten_bind_b2RevoluteJoint_EnableLimit_1"] = asm["_emscripten_bind_b2RevoluteJoint_EnableLimit_1"];
 var _emscripten_bind_b2ContactEdge_get_next_0 = Module["_emscripten_bind_b2ContactEdge_get_next_0"] = asm["_emscripten_bind_b2ContactEdge_get_next_0"];
 var _emscripten_bind_b2AABB_GetPerimeter_0 = Module["_emscripten_bind_b2AABB_GetPerimeter_0"] = asm["_emscripten_bind_b2AABB_GetPerimeter_0"];
@@ -2659,6 +2670,7 @@ var _emscripten_bind_b2Fixture_GetBody_0 = Module["_emscripten_bind_b2Fixture_Ge
 var _emscripten_bind_b2ContactImpulse_set_count_1 = Module["_emscripten_bind_b2ContactImpulse_set_count_1"] = asm["_emscripten_bind_b2ContactImpulse_set_count_1"];
 var _emscripten_bind_b2FixtureDef_set_shape_1 = Module["_emscripten_bind_b2FixtureDef_set_shape_1"] = asm["_emscripten_bind_b2FixtureDef_set_shape_1"];
 var _emscripten_bind_b2PulleyJointDef_get_bodyB_0 = Module["_emscripten_bind_b2PulleyJointDef_get_bodyB_0"] = asm["_emscripten_bind_b2PulleyJointDef_get_bodyB_0"];
+var _emscripten_bind_b2ChainShape_GetChildCount_0 = Module["_emscripten_bind_b2ChainShape_GetChildCount_0"] = asm["_emscripten_bind_b2ChainShape_GetChildCount_0"];
 var _emscripten_bind_b2CircleShape_b2CircleShape_0 = Module["_emscripten_bind_b2CircleShape_b2CircleShape_0"] = asm["_emscripten_bind_b2CircleShape_b2CircleShape_0"];
 var _emscripten_bind_b2RevoluteJoint_GetReactionTorque_1 = Module["_emscripten_bind_b2RevoluteJoint_GetReactionTorque_1"] = asm["_emscripten_bind_b2RevoluteJoint_GetReactionTorque_1"];
 var _emscripten_bind_b2Fixture_SetDensity_1 = Module["_emscripten_bind_b2Fixture_SetDensity_1"] = asm["_emscripten_bind_b2Fixture_SetDensity_1"];
@@ -2681,15 +2693,16 @@ var _emscripten_bind_b2PolygonShape_GetType_0 = Module["_emscripten_bind_b2Polyg
 var _emscripten_bind_b2PrismaticJointDef_set_referenceAngle_1 = Module["_emscripten_bind_b2PrismaticJointDef_set_referenceAngle_1"] = asm["_emscripten_bind_b2PrismaticJointDef_set_referenceAngle_1"];
 var _emscripten_bind_b2RopeJointDef_get_collideConnected_0 = Module["_emscripten_bind_b2RopeJointDef_get_collideConnected_0"] = asm["_emscripten_bind_b2RopeJointDef_get_collideConnected_0"];
 var _emscripten_bind_b2FixtureDef_set_filter_1 = Module["_emscripten_bind_b2FixtureDef_set_filter_1"] = asm["_emscripten_bind_b2FixtureDef_set_filter_1"];
-var _emscripten_bind_b2PulleyJointDef_get_groundAnchorA_0 = Module["_emscripten_bind_b2PulleyJointDef_get_groundAnchorA_0"] = asm["_emscripten_bind_b2PulleyJointDef_get_groundAnchorA_0"];
+var _emscripten_bind_b2Body_ApplyTorque_2 = Module["_emscripten_bind_b2Body_ApplyTorque_2"] = asm["_emscripten_bind_b2Body_ApplyTorque_2"];
 var _emscripten_bind_b2RevoluteJoint___destroy___0 = Module["_emscripten_bind_b2RevoluteJoint___destroy___0"] = asm["_emscripten_bind_b2RevoluteJoint___destroy___0"];
 var _emscripten_bind_b2FrictionJointDef_get_userData_0 = Module["_emscripten_bind_b2FrictionJointDef_get_userData_0"] = asm["_emscripten_bind_b2FrictionJointDef_get_userData_0"];
 var _emscripten_bind_b2RayCastCallback___destroy___0 = Module["_emscripten_bind_b2RayCastCallback___destroy___0"] = asm["_emscripten_bind_b2RayCastCallback___destroy___0"];
 var _emscripten_bind_b2RevoluteJointDef_set_bodyA_1 = Module["_emscripten_bind_b2RevoluteJointDef_set_bodyA_1"] = asm["_emscripten_bind_b2RevoluteJointDef_set_bodyA_1"];
-var _emscripten_bind_b2WheelJointDef_set_bodyA_1 = Module["_emscripten_bind_b2WheelJointDef_set_bodyA_1"] = asm["_emscripten_bind_b2WheelJointDef_set_bodyA_1"];
+var _emscripten_bind_b2MotorJoint_SetUserData_1 = Module["_emscripten_bind_b2MotorJoint_SetUserData_1"] = asm["_emscripten_bind_b2MotorJoint_SetUserData_1"];
 var _emscripten_bind_b2PrismaticJoint_GetLocalAxisA_0 = Module["_emscripten_bind_b2PrismaticJoint_GetLocalAxisA_0"] = asm["_emscripten_bind_b2PrismaticJoint_GetLocalAxisA_0"];
-var _emscripten_bind_b2WheelJoint_GetAnchorA_0 = Module["_emscripten_bind_b2WheelJoint_GetAnchorA_0"] = asm["_emscripten_bind_b2WheelJoint_GetAnchorA_0"];
+var _emscripten_bind_b2MotorJoint_GetBodyB_0 = Module["_emscripten_bind_b2MotorJoint_GetBodyB_0"] = asm["_emscripten_bind_b2MotorJoint_GetBodyB_0"];
 var _emscripten_bind_b2Transform_Set_2 = Module["_emscripten_bind_b2Transform_Set_2"] = asm["_emscripten_bind_b2Transform_Set_2"];
+var _emscripten_bind_b2MotorJoint_GetBodyA_0 = Module["_emscripten_bind_b2MotorJoint_GetBodyA_0"] = asm["_emscripten_bind_b2MotorJoint_GetBodyA_0"];
 var _emscripten_bind_b2Draw_AppendFlags_1 = Module["_emscripten_bind_b2Draw_AppendFlags_1"] = asm["_emscripten_bind_b2Draw_AppendFlags_1"];
 var _emscripten_bind_b2EdgeShape_GetChildCount_0 = Module["_emscripten_bind_b2EdgeShape_GetChildCount_0"] = asm["_emscripten_bind_b2EdgeShape_GetChildCount_0"];
 var _emscripten_bind_b2Contact_ResetFriction_0 = Module["_emscripten_bind_b2Contact_ResetFriction_0"] = asm["_emscripten_bind_b2Contact_ResetFriction_0"];
@@ -2704,13 +2717,15 @@ var _emscripten_enum_b2LimitState_e_equalLimits = Module["_emscripten_enum_b2Lim
 var _emscripten_bind_b2ManifoldPoint_set_normalImpulse_1 = Module["_emscripten_bind_b2ManifoldPoint_set_normalImpulse_1"] = asm["_emscripten_bind_b2ManifoldPoint_set_normalImpulse_1"];
 var _emscripten_bind_b2Body_IsFixedRotation_0 = Module["_emscripten_bind_b2Body_IsFixedRotation_0"] = asm["_emscripten_bind_b2Body_IsFixedRotation_0"];
 var _emscripten_enum_b2DrawFlag_e_shapeBit = Module["_emscripten_enum_b2DrawFlag_e_shapeBit"] = asm["_emscripten_enum_b2DrawFlag_e_shapeBit"];
-var _emscripten_bind_b2RevoluteJointDef_set_bodyB_1 = Module["_emscripten_bind_b2RevoluteJointDef_set_bodyB_1"] = asm["_emscripten_bind_b2RevoluteJointDef_set_bodyB_1"];
+var _emscripten_bind_b2Contact_GetFriction_0 = Module["_emscripten_bind_b2Contact_GetFriction_0"] = asm["_emscripten_bind_b2Contact_GetFriction_0"];
 var _emscripten_bind_b2Body_GetContactList_0 = Module["_emscripten_bind_b2Body_GetContactList_0"] = asm["_emscripten_bind_b2Body_GetContactList_0"];
 var _emscripten_bind_b2DistanceJointDef_set_length_1 = Module["_emscripten_bind_b2DistanceJointDef_set_length_1"] = asm["_emscripten_bind_b2DistanceJointDef_set_length_1"];
 var _emscripten_bind_b2DistanceJoint_GetLocalAnchorB_0 = Module["_emscripten_bind_b2DistanceJoint_GetLocalAnchorB_0"] = asm["_emscripten_bind_b2DistanceJoint_GetLocalAnchorB_0"];
+var _emscripten_bind_b2FrictionJoint_GetLocalAnchorB_0 = Module["_emscripten_bind_b2FrictionJoint_GetLocalAnchorB_0"] = asm["_emscripten_bind_b2FrictionJoint_GetLocalAnchorB_0"];
 var _emscripten_bind_b2World_b2World_1 = Module["_emscripten_bind_b2World_b2World_1"] = asm["_emscripten_bind_b2World_b2World_1"];
 var _emscripten_bind_b2DistanceJointDef_get_type_0 = Module["_emscripten_bind_b2DistanceJointDef_get_type_0"] = asm["_emscripten_bind_b2DistanceJointDef_get_type_0"];
 var _emscripten_bind_b2Draw_ClearFlags_1 = Module["_emscripten_bind_b2Draw_ClearFlags_1"] = asm["_emscripten_bind_b2Draw_ClearFlags_1"];
+var _emscripten_bind_b2Body_SetAngularDamping_1 = Module["_emscripten_bind_b2Body_SetAngularDamping_1"] = asm["_emscripten_bind_b2Body_SetAngularDamping_1"];
 var _emscripten_bind_b2Body_IsActive_0 = Module["_emscripten_bind_b2Body_IsActive_0"] = asm["_emscripten_bind_b2Body_IsActive_0"];
 var _emscripten_bind_b2Contact_ResetRestitution_0 = Module["_emscripten_bind_b2Contact_ResetRestitution_0"] = asm["_emscripten_bind_b2Contact_ResetRestitution_0"];
 var _emscripten_bind_b2World_GetAllowSleeping_0 = Module["_emscripten_bind_b2World_GetAllowSleeping_0"] = asm["_emscripten_bind_b2World_GetAllowSleeping_0"];
@@ -2721,7 +2736,7 @@ var _emscripten_bind_b2RevoluteJointDef_set_enableMotor_1 = Module["_emscripten_
 var _emscripten_bind_b2PulleyJoint_IsActive_0 = Module["_emscripten_bind_b2PulleyJoint_IsActive_0"] = asm["_emscripten_bind_b2PulleyJoint_IsActive_0"];
 var _emscripten_bind_b2MouseJoint_GetNext_0 = Module["_emscripten_bind_b2MouseJoint_GetNext_0"] = asm["_emscripten_bind_b2MouseJoint_GetNext_0"];
 var _emscripten_bind_b2RevoluteJoint_SetUserData_1 = Module["_emscripten_bind_b2RevoluteJoint_SetUserData_1"] = asm["_emscripten_bind_b2RevoluteJoint_SetUserData_1"];
-var _emscripten_bind_b2RopeJointDef_get_localAnchorB_0 = Module["_emscripten_bind_b2RopeJointDef_get_localAnchorB_0"] = asm["_emscripten_bind_b2RopeJointDef_get_localAnchorB_0"];
+var _emscripten_bind_b2Manifold_get_localPoint_0 = Module["_emscripten_bind_b2Manifold_get_localPoint_0"] = asm["_emscripten_bind_b2Manifold_get_localPoint_0"];
 var _emscripten_bind_b2PulleyJointDef_get_lengthB_0 = Module["_emscripten_bind_b2PulleyJointDef_get_lengthB_0"] = asm["_emscripten_bind_b2PulleyJointDef_get_lengthB_0"];
 var _emscripten_bind_b2WeldJoint_SetUserData_1 = Module["_emscripten_bind_b2WeldJoint_SetUserData_1"] = asm["_emscripten_bind_b2WeldJoint_SetUserData_1"];
 var _emscripten_bind_b2ChainShape_CreateLoop_2 = Module["_emscripten_bind_b2ChainShape_CreateLoop_2"] = asm["_emscripten_bind_b2ChainShape_CreateLoop_2"];
@@ -2740,8 +2755,11 @@ var _emscripten_bind_b2PulleyJoint_GetType_0 = Module["_emscripten_bind_b2Pulley
 var _emscripten_bind_b2WeldJointDef_set_localAnchorA_1 = Module["_emscripten_bind_b2WeldJointDef_set_localAnchorA_1"] = asm["_emscripten_bind_b2WeldJointDef_set_localAnchorA_1"];
 var _emscripten_bind_b2Profile_set_step_1 = Module["_emscripten_bind_b2Profile_set_step_1"] = asm["_emscripten_bind_b2Profile_set_step_1"];
 var _emscripten_bind_b2ContactEdge_set_other_1 = Module["_emscripten_bind_b2ContactEdge_set_other_1"] = asm["_emscripten_bind_b2ContactEdge_set_other_1"];
+var _emscripten_bind_b2PulleyJoint_GetCurrentLengthB_0 = Module["_emscripten_bind_b2PulleyJoint_GetCurrentLengthB_0"] = asm["_emscripten_bind_b2PulleyJoint_GetCurrentLengthB_0"];
 var _emscripten_bind_b2Vec2_op_mul_1 = Module["_emscripten_bind_b2Vec2_op_mul_1"] = asm["_emscripten_bind_b2Vec2_op_mul_1"];
 var _emscripten_bind_b2PrismaticJointDef_get_localAnchorA_0 = Module["_emscripten_bind_b2PrismaticJointDef_get_localAnchorA_0"] = asm["_emscripten_bind_b2PrismaticJointDef_get_localAnchorA_0"];
+var _emscripten_bind_b2EdgeShape___destroy___0 = Module["_emscripten_bind_b2EdgeShape___destroy___0"] = asm["_emscripten_bind_b2EdgeShape___destroy___0"];
+var _emscripten_bind_b2PolygonShape_get_m_count_0 = Module["_emscripten_bind_b2PolygonShape_get_m_count_0"] = asm["_emscripten_bind_b2PolygonShape_get_m_count_0"];
 var _emscripten_bind_b2RopeJoint_GetAnchorA_0 = Module["_emscripten_bind_b2RopeJoint_GetAnchorA_0"] = asm["_emscripten_bind_b2RopeJoint_GetAnchorA_0"];
 var _emscripten_bind_b2DistanceJointDef_get_bodyA_0 = Module["_emscripten_bind_b2DistanceJointDef_get_bodyA_0"] = asm["_emscripten_bind_b2DistanceJointDef_get_bodyA_0"];
 var _emscripten_bind_b2AABB_Combine_2 = Module["_emscripten_bind_b2AABB_Combine_2"] = asm["_emscripten_bind_b2AABB_Combine_2"];
@@ -2752,22 +2770,24 @@ var _emscripten_bind_b2RopeJoint_GetLocalAnchorB_0 = Module["_emscripten_bind_b2
 var _emscripten_bind_b2PulleyJointDef___destroy___0 = Module["_emscripten_bind_b2PulleyJointDef___destroy___0"] = asm["_emscripten_bind_b2PulleyJointDef___destroy___0"];
 var _emscripten_bind_b2MouseJoint_GetBodyB_0 = Module["_emscripten_bind_b2MouseJoint_GetBodyB_0"] = asm["_emscripten_bind_b2MouseJoint_GetBodyB_0"];
 var _emscripten_bind_b2PolygonShape_TestPoint_2 = Module["_emscripten_bind_b2PolygonShape_TestPoint_2"] = asm["_emscripten_bind_b2PolygonShape_TestPoint_2"];
-var _emscripten_bind_b2BodyDef_set_userData_1 = Module["_emscripten_bind_b2BodyDef_set_userData_1"] = asm["_emscripten_bind_b2BodyDef_set_userData_1"];
+var _emscripten_bind_b2JointEdge_get_other_0 = Module["_emscripten_bind_b2JointEdge_get_other_0"] = asm["_emscripten_bind_b2JointEdge_get_other_0"];
 var _emscripten_bind_b2PolygonShape_b2PolygonShape_0 = Module["_emscripten_bind_b2PolygonShape_b2PolygonShape_0"] = asm["_emscripten_bind_b2PolygonShape_b2PolygonShape_0"];
 var _emscripten_bind_b2PolygonShape_Set_2 = Module["_emscripten_bind_b2PolygonShape_Set_2"] = asm["_emscripten_bind_b2PolygonShape_Set_2"];
 var _emscripten_bind_b2GearJoint_GetReactionForce_1 = Module["_emscripten_bind_b2GearJoint_GetReactionForce_1"] = asm["_emscripten_bind_b2GearJoint_GetReactionForce_1"];
 var _emscripten_bind_b2DistanceJointDef_get_localAnchorA_0 = Module["_emscripten_bind_b2DistanceJointDef_get_localAnchorA_0"] = asm["_emscripten_bind_b2DistanceJointDef_get_localAnchorA_0"];
 var _emscripten_bind_b2Fixture_SetUserData_1 = Module["_emscripten_bind_b2Fixture_SetUserData_1"] = asm["_emscripten_bind_b2Fixture_SetUserData_1"];
+var _emscripten_bind_b2Contact_SetTangentSpeed_1 = Module["_emscripten_bind_b2Contact_SetTangentSpeed_1"] = asm["_emscripten_bind_b2Contact_SetTangentSpeed_1"];
 var _emscripten_bind_b2PrismaticJointDef_b2PrismaticJointDef_0 = Module["_emscripten_bind_b2PrismaticJointDef_b2PrismaticJointDef_0"] = asm["_emscripten_bind_b2PrismaticJointDef_b2PrismaticJointDef_0"];
 var _emscripten_bind_b2BodyDef_get_active_0 = Module["_emscripten_bind_b2BodyDef_get_active_0"] = asm["_emscripten_bind_b2BodyDef_get_active_0"];
 var _emscripten_bind_b2Body_GetAngularVelocity_0 = Module["_emscripten_bind_b2Body_GetAngularVelocity_0"] = asm["_emscripten_bind_b2Body_GetAngularVelocity_0"];
 var _emscripten_bind_b2CircleShape_set_m_p_1 = Module["_emscripten_bind_b2CircleShape_set_m_p_1"] = asm["_emscripten_bind_b2CircleShape_set_m_p_1"];
+var _emscripten_bind_b2Draw___destroy___0 = Module["_emscripten_bind_b2Draw___destroy___0"] = asm["_emscripten_bind_b2Draw___destroy___0"];
 var _emscripten_bind_b2WheelJointDef_Initialize_4 = Module["_emscripten_bind_b2WheelJointDef_Initialize_4"] = asm["_emscripten_bind_b2WheelJointDef_Initialize_4"];
 var _emscripten_bind_b2WeldJointDef_set_dampingRatio_1 = Module["_emscripten_bind_b2WeldJointDef_set_dampingRatio_1"] = asm["_emscripten_bind_b2WeldJointDef_set_dampingRatio_1"];
 var _emscripten_bind_b2ChainShape_b2ChainShape_0 = Module["_emscripten_bind_b2ChainShape_b2ChainShape_0"] = asm["_emscripten_bind_b2ChainShape_b2ChainShape_0"];
 var _emscripten_bind_b2Joint_GetAnchorB_0 = Module["_emscripten_bind_b2Joint_GetAnchorB_0"] = asm["_emscripten_bind_b2Joint_GetAnchorB_0"];
 var _emscripten_bind_b2PrismaticJointDef_get_userData_0 = Module["_emscripten_bind_b2PrismaticJointDef_get_userData_0"] = asm["_emscripten_bind_b2PrismaticJointDef_get_userData_0"];
-var _emscripten_bind_b2ContactFeature_set_typeB_1 = Module["_emscripten_bind_b2ContactFeature_set_typeB_1"] = asm["_emscripten_bind_b2ContactFeature_set_typeB_1"];
+var _emscripten_bind_b2MotorJoint_GetMaxForce_0 = Module["_emscripten_bind_b2MotorJoint_GetMaxForce_0"] = asm["_emscripten_bind_b2MotorJoint_GetMaxForce_0"];
 var _emscripten_bind_b2RevoluteJoint_GetBodyA_0 = Module["_emscripten_bind_b2RevoluteJoint_GetBodyA_0"] = asm["_emscripten_bind_b2RevoluteJoint_GetBodyA_0"];
 var _emscripten_bind_b2ContactID_set_cf_1 = Module["_emscripten_bind_b2ContactID_set_cf_1"] = asm["_emscripten_bind_b2ContactID_set_cf_1"];
 var _emscripten_bind_b2Body_GetGravityScale_0 = Module["_emscripten_bind_b2Body_GetGravityScale_0"] = asm["_emscripten_bind_b2Body_GetGravityScale_0"];
@@ -2787,7 +2807,7 @@ var _emscripten_bind_b2RevoluteJointDef_get_enableMotor_0 = Module["_emscripten_
 var _memset = Module["_memset"] = asm["_memset"];
 var _emscripten_bind_b2PolygonShape_get_m_radius_0 = Module["_emscripten_bind_b2PolygonShape_get_m_radius_0"] = asm["_emscripten_bind_b2PolygonShape_get_m_radius_0"];
 var _emscripten_enum_b2BodyType_b2_kinematicBody = Module["_emscripten_enum_b2BodyType_b2_kinematicBody"] = asm["_emscripten_enum_b2BodyType_b2_kinematicBody"];
-var _emscripten_bind_b2RevoluteJointDef_Initialize_3 = Module["_emscripten_bind_b2RevoluteJointDef_Initialize_3"] = asm["_emscripten_bind_b2RevoluteJointDef_Initialize_3"];
+var _emscripten_bind_b2Rot_set_s_1 = Module["_emscripten_bind_b2Rot_set_s_1"] = asm["_emscripten_bind_b2Rot_set_s_1"];
 var _emscripten_enum_b2ManifoldType_e_faceA = Module["_emscripten_enum_b2ManifoldType_e_faceA"] = asm["_emscripten_enum_b2ManifoldType_e_faceA"];
 var _emscripten_enum_b2ManifoldType_e_faceB = Module["_emscripten_enum_b2ManifoldType_e_faceB"] = asm["_emscripten_enum_b2ManifoldType_e_faceB"];
 var _emscripten_bind_b2RevoluteJointDef_get_bodyB_0 = Module["_emscripten_bind_b2RevoluteJointDef_get_bodyB_0"] = asm["_emscripten_bind_b2RevoluteJointDef_get_bodyB_0"];
@@ -2816,11 +2836,11 @@ var _emscripten_bind_b2DistanceJoint_GetLength_0 = Module["_emscripten_bind_b2Di
 var _emscripten_bind_b2PulleyJoint_GetLengthB_0 = Module["_emscripten_bind_b2PulleyJoint_GetLengthB_0"] = asm["_emscripten_bind_b2PulleyJoint_GetLengthB_0"];
 var _emscripten_bind_b2PrismaticJoint_GetUpperLimit_0 = Module["_emscripten_bind_b2PrismaticJoint_GetUpperLimit_0"] = asm["_emscripten_bind_b2PrismaticJoint_GetUpperLimit_0"];
 var _emscripten_bind_b2WheelJoint_SetMaxMotorTorque_1 = Module["_emscripten_bind_b2WheelJoint_SetMaxMotorTorque_1"] = asm["_emscripten_bind_b2WheelJoint_SetMaxMotorTorque_1"];
+var _emscripten_bind_b2MotorJoint_GetUserData_0 = Module["_emscripten_bind_b2MotorJoint_GetUserData_0"] = asm["_emscripten_bind_b2MotorJoint_GetUserData_0"];
 var _emscripten_bind_b2FrictionJoint_GetReactionTorque_1 = Module["_emscripten_bind_b2FrictionJoint_GetReactionTorque_1"] = asm["_emscripten_bind_b2FrictionJoint_GetReactionTorque_1"];
 var _emscripten_bind_b2Shape_get_m_type_0 = Module["_emscripten_bind_b2Shape_get_m_type_0"] = asm["_emscripten_bind_b2Shape_get_m_type_0"];
 var _emscripten_bind_b2MouseJoint_SetDampingRatio_1 = Module["_emscripten_bind_b2MouseJoint_SetDampingRatio_1"] = asm["_emscripten_bind_b2MouseJoint_SetDampingRatio_1"];
 var _emscripten_bind_b2World_GetAutoClearForces_0 = Module["_emscripten_bind_b2World_GetAutoClearForces_0"] = asm["_emscripten_bind_b2World_GetAutoClearForces_0"];
-var _emscripten_bind_b2Fixture_SetFilterData_1 = Module["_emscripten_bind_b2Fixture_SetFilterData_1"] = asm["_emscripten_bind_b2Fixture_SetFilterData_1"];
 var _emscripten_enum_b2ShapeType_e_circle = Module["_emscripten_enum_b2ShapeType_e_circle"] = asm["_emscripten_enum_b2ShapeType_e_circle"];
 var _emscripten_bind_b2BodyDef_set_fixedRotation_1 = Module["_emscripten_bind_b2BodyDef_set_fixedRotation_1"] = asm["_emscripten_bind_b2BodyDef_set_fixedRotation_1"];
 var _emscripten_bind_b2Vec2_b2Vec2_2 = Module["_emscripten_bind_b2Vec2_b2Vec2_2"] = asm["_emscripten_bind_b2Vec2_b2Vec2_2"];
@@ -2831,6 +2851,7 @@ var _emscripten_bind_b2Body_GetWorldCenter_0 = Module["_emscripten_bind_b2Body_G
 var _emscripten_bind_b2WheelJointDef_set_maxMotorTorque_1 = Module["_emscripten_bind_b2WheelJointDef_set_maxMotorTorque_1"] = asm["_emscripten_bind_b2WheelJointDef_set_maxMotorTorque_1"];
 var _emscripten_bind_b2BodyDef_set_linearVelocity_1 = Module["_emscripten_bind_b2BodyDef_set_linearVelocity_1"] = asm["_emscripten_bind_b2BodyDef_set_linearVelocity_1"];
 var _emscripten_bind_b2JointDef_set_collideConnected_1 = Module["_emscripten_bind_b2JointDef_set_collideConnected_1"] = asm["_emscripten_bind_b2JointDef_set_collideConnected_1"];
+var _emscripten_bind_b2MotorJoint___destroy___0 = Module["_emscripten_bind_b2MotorJoint___destroy___0"] = asm["_emscripten_bind_b2MotorJoint___destroy___0"];
 var _emscripten_bind_b2Body_GetUserData_0 = Module["_emscripten_bind_b2Body_GetUserData_0"] = asm["_emscripten_bind_b2Body_GetUserData_0"];
 var _emscripten_bind_b2Body_GetAngularDamping_0 = Module["_emscripten_bind_b2Body_GetAngularDamping_0"] = asm["_emscripten_bind_b2Body_GetAngularDamping_0"];
 var _emscripten_bind_b2Fixture_RayCast_3 = Module["_emscripten_bind_b2Fixture_RayCast_3"] = asm["_emscripten_bind_b2Fixture_RayCast_3"];
@@ -2851,7 +2872,7 @@ var _emscripten_bind_b2GearJoint_GetJoint2_0 = Module["_emscripten_bind_b2GearJo
 var _emscripten_bind_b2PulleyJointDef_get_userData_0 = Module["_emscripten_bind_b2PulleyJointDef_get_userData_0"] = asm["_emscripten_bind_b2PulleyJointDef_get_userData_0"];
 var _emscripten_bind_b2PrismaticJointDef_set_bodyB_1 = Module["_emscripten_bind_b2PrismaticJointDef_set_bodyB_1"] = asm["_emscripten_bind_b2PrismaticJointDef_set_bodyB_1"];
 var _emscripten_bind_b2FrictionJointDef_b2FrictionJointDef_0 = Module["_emscripten_bind_b2FrictionJointDef_b2FrictionJointDef_0"] = asm["_emscripten_bind_b2FrictionJointDef_b2FrictionJointDef_0"];
-var _emscripten_bind_b2MouseJoint_GetFrequency_0 = Module["_emscripten_bind_b2MouseJoint_GetFrequency_0"] = asm["_emscripten_bind_b2MouseJoint_GetFrequency_0"];
+var _emscripten_bind_b2PulleyJoint_GetCurrentLengthA_0 = Module["_emscripten_bind_b2PulleyJoint_GetCurrentLengthA_0"] = asm["_emscripten_bind_b2PulleyJoint_GetCurrentLengthA_0"];
 var _emscripten_bind_b2Manifold_get_localNormal_0 = Module["_emscripten_bind_b2Manifold_get_localNormal_0"] = asm["_emscripten_bind_b2Manifold_get_localNormal_0"];
 var _emscripten_bind_b2Vec3_b2Vec3_0 = Module["_emscripten_bind_b2Vec3_b2Vec3_0"] = asm["_emscripten_bind_b2Vec3_b2Vec3_0"];
 var _emscripten_bind_b2Body_SetSleepingAllowed_1 = Module["_emscripten_bind_b2Body_SetSleepingAllowed_1"] = asm["_emscripten_bind_b2Body_SetSleepingAllowed_1"];
@@ -2873,8 +2894,10 @@ var _emscripten_bind_b2WeldJoint_GetUserData_0 = Module["_emscripten_bind_b2Weld
 var _emscripten_bind_b2WheelJointDef_get_localAnchorA_0 = Module["_emscripten_bind_b2WheelJointDef_get_localAnchorA_0"] = asm["_emscripten_bind_b2WheelJointDef_get_localAnchorA_0"];
 var _emscripten_bind_b2PulleyJointDef_set_type_1 = Module["_emscripten_bind_b2PulleyJointDef_set_type_1"] = asm["_emscripten_bind_b2PulleyJointDef_set_type_1"];
 var _emscripten_bind_b2Body_IsBullet_0 = Module["_emscripten_bind_b2Body_IsBullet_0"] = asm["_emscripten_bind_b2Body_IsBullet_0"];
-var _emscripten_bind_b2Body_ApplyLinearImpulse_2 = Module["_emscripten_bind_b2Body_ApplyLinearImpulse_2"] = asm["_emscripten_bind_b2Body_ApplyLinearImpulse_2"];
+var _emscripten_bind_b2MotorJointDef_set_bodyA_1 = Module["_emscripten_bind_b2MotorJointDef_set_bodyA_1"] = asm["_emscripten_bind_b2MotorJointDef_set_bodyA_1"];
+var _emscripten_bind_b2Fixture_TestPoint_1 = Module["_emscripten_bind_b2Fixture_TestPoint_1"] = asm["_emscripten_bind_b2Fixture_TestPoint_1"];
 var _emscripten_bind_b2Mat33_GetSymInverse33_1 = Module["_emscripten_bind_b2Mat33_GetSymInverse33_1"] = asm["_emscripten_bind_b2Mat33_GetSymInverse33_1"];
+var _emscripten_bind_JSDraw_DrawPolygon_3 = Module["_emscripten_bind_JSDraw_DrawPolygon_3"] = asm["_emscripten_bind_JSDraw_DrawPolygon_3"];
 var _emscripten_bind_b2PolygonShape_ComputeMass_2 = Module["_emscripten_bind_b2PolygonShape_ComputeMass_2"] = asm["_emscripten_bind_b2PolygonShape_ComputeMass_2"];
 var _emscripten_bind_b2PrismaticJointDef_set_upperTranslation_1 = Module["_emscripten_bind_b2PrismaticJointDef_set_upperTranslation_1"] = asm["_emscripten_bind_b2PrismaticJointDef_set_upperTranslation_1"];
 var _emscripten_bind_b2MouseJoint_SetFrequency_1 = Module["_emscripten_bind_b2MouseJoint_SetFrequency_1"] = asm["_emscripten_bind_b2MouseJoint_SetFrequency_1"];
@@ -2884,6 +2907,7 @@ var _emscripten_bind_b2Vec2_get_y_0 = Module["_emscripten_bind_b2Vec2_get_y_0"] 
 var _emscripten_bind_b2Filter_set_categoryBits_1 = Module["_emscripten_bind_b2Filter_set_categoryBits_1"] = asm["_emscripten_bind_b2Filter_set_categoryBits_1"];
 var _emscripten_bind_b2Body_CreateFixture_2 = Module["_emscripten_bind_b2Body_CreateFixture_2"] = asm["_emscripten_bind_b2Body_CreateFixture_2"];
 var _emscripten_bind_b2Body_SetActive_1 = Module["_emscripten_bind_b2Body_SetActive_1"] = asm["_emscripten_bind_b2Body_SetActive_1"];
+var _emscripten_bind_b2ContactFeature_get_indexB_0 = Module["_emscripten_bind_b2ContactFeature_get_indexB_0"] = asm["_emscripten_bind_b2ContactFeature_get_indexB_0"];
 var _emscripten_bind_b2Fixture_GetUserData_0 = Module["_emscripten_bind_b2Fixture_GetUserData_0"] = asm["_emscripten_bind_b2Fixture_GetUserData_0"];
 var _emscripten_bind_b2PolygonShape_ComputeAABB_3 = Module["_emscripten_bind_b2PolygonShape_ComputeAABB_3"] = asm["_emscripten_bind_b2PolygonShape_ComputeAABB_3"];
 var _emscripten_bind_b2ContactFeature_get_typeA_0 = Module["_emscripten_bind_b2ContactFeature_get_typeA_0"] = asm["_emscripten_bind_b2ContactFeature_get_typeA_0"];
@@ -2898,20 +2922,21 @@ var _emscripten_bind_b2PrismaticJointDef_set_enableLimit_1 = Module["_emscripten
 var _emscripten_bind_b2DistanceJoint_GetFrequency_0 = Module["_emscripten_bind_b2DistanceJoint_GetFrequency_0"] = asm["_emscripten_bind_b2DistanceJoint_GetFrequency_0"];
 var _emscripten_bind_b2PrismaticJointDef_get_collideConnected_0 = Module["_emscripten_bind_b2PrismaticJointDef_get_collideConnected_0"] = asm["_emscripten_bind_b2PrismaticJointDef_get_collideConnected_0"];
 var _emscripten_bind_b2Body_SetGravityScale_1 = Module["_emscripten_bind_b2Body_SetGravityScale_1"] = asm["_emscripten_bind_b2Body_SetGravityScale_1"];
+var _emscripten_enum_b2ContactFeatureType_e_face = Module["_emscripten_enum_b2ContactFeatureType_e_face"] = asm["_emscripten_enum_b2ContactFeatureType_e_face"];
 var _emscripten_bind_b2RevoluteJoint_GetUpperLimit_0 = Module["_emscripten_bind_b2RevoluteJoint_GetUpperLimit_0"] = asm["_emscripten_bind_b2RevoluteJoint_GetUpperLimit_0"];
 var _emscripten_bind_b2PulleyJointDef_get_lengthA_0 = Module["_emscripten_bind_b2PulleyJointDef_get_lengthA_0"] = asm["_emscripten_bind_b2PulleyJointDef_get_lengthA_0"];
 var _emscripten_bind_b2Vec3_set_x_1 = Module["_emscripten_bind_b2Vec3_set_x_1"] = asm["_emscripten_bind_b2Vec3_set_x_1"];
 var _emscripten_bind_b2PulleyJointDef_get_type_0 = Module["_emscripten_bind_b2PulleyJointDef_get_type_0"] = asm["_emscripten_bind_b2PulleyJointDef_get_type_0"];
 var _emscripten_bind_JSDestructionListener_SayGoodbyeJoint_1 = Module["_emscripten_bind_JSDestructionListener_SayGoodbyeJoint_1"] = asm["_emscripten_bind_JSDestructionListener_SayGoodbyeJoint_1"];
 var _emscripten_bind_b2Shape___destroy___0 = Module["_emscripten_bind_b2Shape___destroy___0"] = asm["_emscripten_bind_b2Shape___destroy___0"];
-var _emscripten_bind_b2DistanceJointDef_get_length_0 = Module["_emscripten_bind_b2DistanceJointDef_get_length_0"] = asm["_emscripten_bind_b2DistanceJointDef_get_length_0"];
 var _emscripten_bind_b2Joint_GetReactionForce_1 = Module["_emscripten_bind_b2Joint_GetReactionForce_1"] = asm["_emscripten_bind_b2Joint_GetReactionForce_1"];
 var _emscripten_bind_b2FixtureDef_set_friction_1 = Module["_emscripten_bind_b2FixtureDef_set_friction_1"] = asm["_emscripten_bind_b2FixtureDef_set_friction_1"];
 var _emscripten_bind_b2ContactID___destroy___0 = Module["_emscripten_bind_b2ContactID___destroy___0"] = asm["_emscripten_bind_b2ContactID___destroy___0"];
 var _emscripten_bind_b2EdgeShape_get_m_hasVertex0_0 = Module["_emscripten_bind_b2EdgeShape_get_m_hasVertex0_0"] = asm["_emscripten_bind_b2EdgeShape_get_m_hasVertex0_0"];
 var _emscripten_bind_b2World_GetBodyCount_0 = Module["_emscripten_bind_b2World_GetBodyCount_0"] = asm["_emscripten_bind_b2World_GetBodyCount_0"];
 var _emscripten_bind_b2JointEdge_get_prev_0 = Module["_emscripten_bind_b2JointEdge_get_prev_0"] = asm["_emscripten_bind_b2JointEdge_get_prev_0"];
-var _emscripten_bind_b2Draw___destroy___0 = Module["_emscripten_bind_b2Draw___destroy___0"] = asm["_emscripten_bind_b2Draw___destroy___0"];
+var _emscripten_bind_b2MotorJointDef_get_linearOffset_0 = Module["_emscripten_bind_b2MotorJointDef_get_linearOffset_0"] = asm["_emscripten_bind_b2MotorJointDef_get_linearOffset_0"];
+var _emscripten_bind_b2MotorJointDef_Initialize_2 = Module["_emscripten_bind_b2MotorJointDef_Initialize_2"] = asm["_emscripten_bind_b2MotorJointDef_Initialize_2"];
 var _emscripten_bind_b2PrismaticJoint_GetAnchorB_0 = Module["_emscripten_bind_b2PrismaticJoint_GetAnchorB_0"] = asm["_emscripten_bind_b2PrismaticJoint_GetAnchorB_0"];
 var _emscripten_bind_b2Body_SetLinearVelocity_1 = Module["_emscripten_bind_b2Body_SetLinearVelocity_1"] = asm["_emscripten_bind_b2Body_SetLinearVelocity_1"];
 var _emscripten_enum_b2BodyType_b2_staticBody = Module["_emscripten_enum_b2BodyType_b2_staticBody"] = asm["_emscripten_enum_b2BodyType_b2_staticBody"];
@@ -2930,6 +2955,7 @@ var _emscripten_bind_b2WheelJoint_GetBodyB_0 = Module["_emscripten_bind_b2WheelJ
 var _emscripten_bind_b2GearJointDef_get_joint2_0 = Module["_emscripten_bind_b2GearJointDef_get_joint2_0"] = asm["_emscripten_bind_b2GearJointDef_get_joint2_0"];
 var _emscripten_bind_b2PrismaticJoint_IsActive_0 = Module["_emscripten_bind_b2PrismaticJoint_IsActive_0"] = asm["_emscripten_bind_b2PrismaticJoint_IsActive_0"];
 var _emscripten_bind_b2Vec3_get_z_0 = Module["_emscripten_bind_b2Vec3_get_z_0"] = asm["_emscripten_bind_b2Vec3_get_z_0"];
+var _emscripten_bind_b2Filter_get_categoryBits_0 = Module["_emscripten_bind_b2Filter_get_categoryBits_0"] = asm["_emscripten_bind_b2Filter_get_categoryBits_0"];
 var _emscripten_enum_b2JointType_e_weldJoint = Module["_emscripten_enum_b2JointType_e_weldJoint"] = asm["_emscripten_enum_b2JointType_e_weldJoint"];
 var _emscripten_bind_b2World_SetContinuousPhysics_1 = Module["_emscripten_bind_b2World_SetContinuousPhysics_1"] = asm["_emscripten_bind_b2World_SetContinuousPhysics_1"];
 var _emscripten_bind_b2MouseJointDef_get_target_0 = Module["_emscripten_bind_b2MouseJointDef_get_target_0"] = asm["_emscripten_bind_b2MouseJointDef_get_target_0"];
@@ -2939,7 +2965,6 @@ var _emscripten_bind_b2FrictionJointDef_set_maxForce_1 = Module["_emscripten_bin
 var _emscripten_bind_b2DistanceJointDef_b2DistanceJointDef_0 = Module["_emscripten_bind_b2DistanceJointDef_b2DistanceJointDef_0"] = asm["_emscripten_bind_b2DistanceJointDef_b2DistanceJointDef_0"];
 var _emscripten_bind_b2BodyDef_get_type_0 = Module["_emscripten_bind_b2BodyDef_get_type_0"] = asm["_emscripten_bind_b2BodyDef_get_type_0"];
 var _emscripten_bind_b2Mat33_GetInverse22_1 = Module["_emscripten_bind_b2Mat33_GetInverse22_1"] = asm["_emscripten_bind_b2Mat33_GetInverse22_1"];
-var _emscripten_bind_b2DistanceJointDef_get_localAnchorB_0 = Module["_emscripten_bind_b2DistanceJointDef_get_localAnchorB_0"] = asm["_emscripten_bind_b2DistanceJointDef_get_localAnchorB_0"];
 var _emscripten_bind_b2PulleyJoint_GetAnchorB_0 = Module["_emscripten_bind_b2PulleyJoint_GetAnchorB_0"] = asm["_emscripten_bind_b2PulleyJoint_GetAnchorB_0"];
 var _emscripten_bind_b2WheelJoint_GetReactionTorque_1 = Module["_emscripten_bind_b2WheelJoint_GetReactionTorque_1"] = asm["_emscripten_bind_b2WheelJoint_GetReactionTorque_1"];
 var _emscripten_bind_b2RevoluteJointDef_b2RevoluteJointDef_0 = Module["_emscripten_bind_b2RevoluteJointDef_b2RevoluteJointDef_0"] = asm["_emscripten_bind_b2RevoluteJointDef_b2RevoluteJointDef_0"];
@@ -2963,19 +2988,23 @@ var _emscripten_bind_b2GearJointDef_b2GearJointDef_0 = Module["_emscripten_bind_
 var _emscripten_bind_b2JointDef_get_bodyB_0 = Module["_emscripten_bind_b2JointDef_get_bodyB_0"] = asm["_emscripten_bind_b2JointDef_get_bodyB_0"];
 var _emscripten_bind_b2DistanceJoint_GetReactionForce_1 = Module["_emscripten_bind_b2DistanceJoint_GetReactionForce_1"] = asm["_emscripten_bind_b2DistanceJoint_GetReactionForce_1"];
 var _emscripten_bind_b2PrismaticJoint_GetJointSpeed_0 = Module["_emscripten_bind_b2PrismaticJoint_GetJointSpeed_0"] = asm["_emscripten_bind_b2PrismaticJoint_GetJointSpeed_0"];
-var _emscripten_bind_b2FixtureDef_get_density_0 = Module["_emscripten_bind_b2FixtureDef_get_density_0"] = asm["_emscripten_bind_b2FixtureDef_get_density_0"];
+var _emscripten_bind_b2MouseJointDef_set_frequencyHz_1 = Module["_emscripten_bind_b2MouseJointDef_set_frequencyHz_1"] = asm["_emscripten_bind_b2MouseJointDef_set_frequencyHz_1"];
+var _emscripten_bind_b2PulleyJointDef_get_groundAnchorA_0 = Module["_emscripten_bind_b2PulleyJointDef_get_groundAnchorA_0"] = asm["_emscripten_bind_b2PulleyJointDef_get_groundAnchorA_0"];
 var _emscripten_bind_b2Joint_GetAnchorA_0 = Module["_emscripten_bind_b2Joint_GetAnchorA_0"] = asm["_emscripten_bind_b2Joint_GetAnchorA_0"];
 var _emscripten_bind_b2Contact_GetRestitution_0 = Module["_emscripten_bind_b2Contact_GetRestitution_0"] = asm["_emscripten_bind_b2Contact_GetRestitution_0"];
 var _emscripten_bind_b2ContactEdge_get_contact_0 = Module["_emscripten_bind_b2ContactEdge_get_contact_0"] = asm["_emscripten_bind_b2ContactEdge_get_contact_0"];
 var _emscripten_bind_b2RevoluteJointDef_get_userData_0 = Module["_emscripten_bind_b2RevoluteJointDef_get_userData_0"] = asm["_emscripten_bind_b2RevoluteJointDef_get_userData_0"];
+var _emscripten_bind_b2Body_ResetMassData_0 = Module["_emscripten_bind_b2Body_ResetMassData_0"] = asm["_emscripten_bind_b2Body_ResetMassData_0"];
 var _emscripten_bind_b2Fixture_GetAABB_1 = Module["_emscripten_bind_b2Fixture_GetAABB_1"] = asm["_emscripten_bind_b2Fixture_GetAABB_1"];
 var _emscripten_bind_b2PrismaticJointDef_set_collideConnected_1 = Module["_emscripten_bind_b2PrismaticJointDef_set_collideConnected_1"] = asm["_emscripten_bind_b2PrismaticJointDef_set_collideConnected_1"];
 var _emscripten_bind_b2Body_GetMassData_1 = Module["_emscripten_bind_b2Body_GetMassData_1"] = asm["_emscripten_bind_b2Body_GetMassData_1"];
 var _emscripten_bind_b2RevoluteJointDef_get_localAnchorA_0 = Module["_emscripten_bind_b2RevoluteJointDef_get_localAnchorA_0"] = asm["_emscripten_bind_b2RevoluteJointDef_get_localAnchorA_0"];
 var _emscripten_bind_b2EdgeShape_ComputeMass_2 = Module["_emscripten_bind_b2EdgeShape_ComputeMass_2"] = asm["_emscripten_bind_b2EdgeShape_ComputeMass_2"];
 var _emscripten_bind_b2GearJointDef_get_bodyB_0 = Module["_emscripten_bind_b2GearJointDef_get_bodyB_0"] = asm["_emscripten_bind_b2GearJointDef_get_bodyB_0"];
+var _emscripten_enum_b2LimitState_e_atLowerLimit = Module["_emscripten_enum_b2LimitState_e_atLowerLimit"] = asm["_emscripten_enum_b2LimitState_e_atLowerLimit"];
+var _emscripten_bind_b2ManifoldPoint_set_id_1 = Module["_emscripten_bind_b2ManifoldPoint_set_id_1"] = asm["_emscripten_bind_b2ManifoldPoint_set_id_1"];
 var _emscripten_bind_b2WheelJointDef_get_bodyB_0 = Module["_emscripten_bind_b2WheelJointDef_get_bodyB_0"] = asm["_emscripten_bind_b2WheelJointDef_get_bodyB_0"];
-var _emscripten_bind_b2Rot_set_s_1 = Module["_emscripten_bind_b2Rot_set_s_1"] = asm["_emscripten_bind_b2Rot_set_s_1"];
+var _emscripten_bind_b2WeldJoint_GetLocalAnchorB_0 = Module["_emscripten_bind_b2WeldJoint_GetLocalAnchorB_0"] = asm["_emscripten_bind_b2WeldJoint_GetLocalAnchorB_0"];
 var _emscripten_bind_b2RevoluteJointDef_set_localAnchorB_1 = Module["_emscripten_bind_b2RevoluteJointDef_set_localAnchorB_1"] = asm["_emscripten_bind_b2RevoluteJointDef_set_localAnchorB_1"];
 var _emscripten_bind_b2Body_DestroyFixture_1 = Module["_emscripten_bind_b2Body_DestroyFixture_1"] = asm["_emscripten_bind_b2Body_DestroyFixture_1"];
 var _emscripten_bind_b2Profile_set_broadphase_1 = Module["_emscripten_bind_b2Profile_set_broadphase_1"] = asm["_emscripten_bind_b2Profile_set_broadphase_1"];
@@ -2987,16 +3016,16 @@ var _emscripten_bind_b2WheelJointDef_get_dampingRatio_0 = Module["_emscripten_bi
 var _emscripten_bind_b2RayCastOutput_get_fraction_0 = Module["_emscripten_bind_b2RayCastOutput_get_fraction_0"] = asm["_emscripten_bind_b2RayCastOutput_get_fraction_0"];
 var _emscripten_bind_b2AABB___destroy___0 = Module["_emscripten_bind_b2AABB___destroy___0"] = asm["_emscripten_bind_b2AABB___destroy___0"];
 var _emscripten_bind_b2GearJoint_SetRatio_1 = Module["_emscripten_bind_b2GearJoint_SetRatio_1"] = asm["_emscripten_bind_b2GearJoint_SetRatio_1"];
-var _emscripten_bind_JSDraw_DrawPolygon_3 = Module["_emscripten_bind_JSDraw_DrawPolygon_3"] = asm["_emscripten_bind_JSDraw_DrawPolygon_3"];
+var _emscripten_bind_b2Body_ApplyLinearImpulse_3 = Module["_emscripten_bind_b2Body_ApplyLinearImpulse_3"] = asm["_emscripten_bind_b2Body_ApplyLinearImpulse_3"];
 var _emscripten_bind_b2Filter___destroy___0 = Module["_emscripten_bind_b2Filter___destroy___0"] = asm["_emscripten_bind_b2Filter___destroy___0"];
 var _emscripten_bind_b2RopeJointDef_get_userData_0 = Module["_emscripten_bind_b2RopeJointDef_get_userData_0"] = asm["_emscripten_bind_b2RopeJointDef_get_userData_0"];
 var ___cxa_is_pointer_type = Module["___cxa_is_pointer_type"] = asm["___cxa_is_pointer_type"];
 var _emscripten_bind_b2BodyDef_get_fixedRotation_0 = Module["_emscripten_bind_b2BodyDef_get_fixedRotation_0"] = asm["_emscripten_bind_b2BodyDef_get_fixedRotation_0"];
 var _emscripten_bind_b2PrismaticJointDef_set_motorSpeed_1 = Module["_emscripten_bind_b2PrismaticJointDef_set_motorSpeed_1"] = asm["_emscripten_bind_b2PrismaticJointDef_set_motorSpeed_1"];
 var _emscripten_bind_b2ChainShape_SetPrevVertex_1 = Module["_emscripten_bind_b2ChainShape_SetPrevVertex_1"] = asm["_emscripten_bind_b2ChainShape_SetPrevVertex_1"];
-var _emscripten_bind_b2Filter_get_categoryBits_0 = Module["_emscripten_bind_b2Filter_get_categoryBits_0"] = asm["_emscripten_bind_b2Filter_get_categoryBits_0"];
+var _emscripten_bind_b2MotorJoint_IsActive_0 = Module["_emscripten_bind_b2MotorJoint_IsActive_0"] = asm["_emscripten_bind_b2MotorJoint_IsActive_0"];
 var _emscripten_bind_b2MouseJoint_GetReactionTorque_1 = Module["_emscripten_bind_b2MouseJoint_GetReactionTorque_1"] = asm["_emscripten_bind_b2MouseJoint_GetReactionTorque_1"];
-var _emscripten_bind_b2MouseJoint_GetUserData_0 = Module["_emscripten_bind_b2MouseJoint_GetUserData_0"] = asm["_emscripten_bind_b2MouseJoint_GetUserData_0"];
+var _emscripten_bind_b2DistanceJointDef_set_collideConnected_1 = Module["_emscripten_bind_b2DistanceJointDef_set_collideConnected_1"] = asm["_emscripten_bind_b2DistanceJointDef_set_collideConnected_1"];
 var _emscripten_bind_b2WheelJoint_GetUserData_0 = Module["_emscripten_bind_b2WheelJoint_GetUserData_0"] = asm["_emscripten_bind_b2WheelJoint_GetUserData_0"];
 var _emscripten_bind_b2Vec3_op_sub_1 = Module["_emscripten_bind_b2Vec3_op_sub_1"] = asm["_emscripten_bind_b2Vec3_op_sub_1"];
 var _emscripten_bind_b2WheelJoint_GetNext_0 = Module["_emscripten_bind_b2WheelJoint_GetNext_0"] = asm["_emscripten_bind_b2WheelJoint_GetNext_0"];
@@ -3008,6 +3037,7 @@ var _emscripten_bind_b2PulleyJoint_GetLengthA_0 = Module["_emscripten_bind_b2Pul
 var _emscripten_bind_b2DistanceJointDef_get_frequencyHz_0 = Module["_emscripten_bind_b2DistanceJointDef_get_frequencyHz_0"] = asm["_emscripten_bind_b2DistanceJointDef_get_frequencyHz_0"];
 var _emscripten_bind_b2RevoluteJoint_SetMotorSpeed_1 = Module["_emscripten_bind_b2RevoluteJoint_SetMotorSpeed_1"] = asm["_emscripten_bind_b2RevoluteJoint_SetMotorSpeed_1"];
 var _emscripten_bind_b2World___destroy___0 = Module["_emscripten_bind_b2World___destroy___0"] = asm["_emscripten_bind_b2World___destroy___0"];
+var _emscripten_bind_b2ChainShape_set_m_prevVertex_1 = Module["_emscripten_bind_b2ChainShape_set_m_prevVertex_1"] = asm["_emscripten_bind_b2ChainShape_set_m_prevVertex_1"];
 var _emscripten_bind_b2ChainShape_get_m_hasNextVertex_0 = Module["_emscripten_bind_b2ChainShape_get_m_hasNextVertex_0"] = asm["_emscripten_bind_b2ChainShape_get_m_hasNextVertex_0"];
 var _emscripten_bind_b2ChainShape_SetNextVertex_1 = Module["_emscripten_bind_b2ChainShape_SetNextVertex_1"] = asm["_emscripten_bind_b2ChainShape_SetNextVertex_1"];
 var _emscripten_bind_b2Body_SetType_1 = Module["_emscripten_bind_b2Body_SetType_1"] = asm["_emscripten_bind_b2Body_SetType_1"];
@@ -3024,6 +3054,8 @@ var _emscripten_bind_b2RevoluteJointDef_set_lowerAngle_1 = Module["_emscripten_b
 var _emscripten_bind_b2JointEdge___destroy___0 = Module["_emscripten_bind_b2JointEdge___destroy___0"] = asm["_emscripten_bind_b2JointEdge___destroy___0"];
 var _emscripten_bind_b2PulleyJoint_GetRatio_0 = Module["_emscripten_bind_b2PulleyJoint_GetRatio_0"] = asm["_emscripten_bind_b2PulleyJoint_GetRatio_0"];
 var _emscripten_bind_JSContactListener_BeginContact_1 = Module["_emscripten_bind_JSContactListener_BeginContact_1"] = asm["_emscripten_bind_JSContactListener_BeginContact_1"];
+var _emscripten_bind_b2MotorJointDef_set_linearOffset_1 = Module["_emscripten_bind_b2MotorJointDef_set_linearOffset_1"] = asm["_emscripten_bind_b2MotorJointDef_set_linearOffset_1"];
+var _emscripten_enum_b2JointType_e_motorJoint = Module["_emscripten_enum_b2JointType_e_motorJoint"] = asm["_emscripten_enum_b2JointType_e_motorJoint"];
 var _emscripten_bind_b2EdgeShape_get_m_vertex2_0 = Module["_emscripten_bind_b2EdgeShape_get_m_vertex2_0"] = asm["_emscripten_bind_b2EdgeShape_get_m_vertex2_0"];
 var _emscripten_bind_b2JointEdge_get_next_0 = Module["_emscripten_bind_b2JointEdge_get_next_0"] = asm["_emscripten_bind_b2JointEdge_get_next_0"];
 var _emscripten_bind_b2RayCastInput_set_maxFraction_1 = Module["_emscripten_bind_b2RayCastInput_set_maxFraction_1"] = asm["_emscripten_bind_b2RayCastInput_set_maxFraction_1"];
@@ -3031,13 +3063,15 @@ var _emscripten_bind_b2MouseJoint_GetBodyA_0 = Module["_emscripten_bind_b2MouseJ
 var _emscripten_bind_b2BodyDef_get_awake_0 = Module["_emscripten_bind_b2BodyDef_get_awake_0"] = asm["_emscripten_bind_b2BodyDef_get_awake_0"];
 var _emscripten_bind_b2AABB_b2AABB_0 = Module["_emscripten_bind_b2AABB_b2AABB_0"] = asm["_emscripten_bind_b2AABB_b2AABB_0"];
 var _emscripten_bind_b2Fixture_SetFriction_1 = Module["_emscripten_bind_b2Fixture_SetFriction_1"] = asm["_emscripten_bind_b2Fixture_SetFriction_1"];
-var _emscripten_bind_b2WeldJointDef_get_referenceAngle_0 = Module["_emscripten_bind_b2WeldJointDef_get_referenceAngle_0"] = asm["_emscripten_bind_b2WeldJointDef_get_referenceAngle_0"];
+var _emscripten_enum_b2DrawFlag_e_centerOfMassBit = Module["_emscripten_enum_b2DrawFlag_e_centerOfMassBit"] = asm["_emscripten_enum_b2DrawFlag_e_centerOfMassBit"];
+var _emscripten_bind_b2World_CreateBody_1 = Module["_emscripten_bind_b2World_CreateBody_1"] = asm["_emscripten_bind_b2World_CreateBody_1"];
 var _emscripten_bind_b2RopeJointDef_set_userData_1 = Module["_emscripten_bind_b2RopeJointDef_set_userData_1"] = asm["_emscripten_bind_b2RopeJointDef_set_userData_1"];
 var _emscripten_bind_b2WeldJoint_GetNext_0 = Module["_emscripten_bind_b2WeldJoint_GetNext_0"] = asm["_emscripten_bind_b2WeldJoint_GetNext_0"];
 var _emscripten_bind_b2WeldJoint_GetType_0 = Module["_emscripten_bind_b2WeldJoint_GetType_0"] = asm["_emscripten_bind_b2WeldJoint_GetType_0"];
 var _emscripten_enum_b2ContactFeatureType_e_vertex = Module["_emscripten_enum_b2ContactFeatureType_e_vertex"] = asm["_emscripten_enum_b2ContactFeatureType_e_vertex"];
 var _emscripten_bind_b2Rot___destroy___0 = Module["_emscripten_bind_b2Rot___destroy___0"] = asm["_emscripten_bind_b2Rot___destroy___0"];
 var _emscripten_bind_b2Filter_get_maskBits_0 = Module["_emscripten_bind_b2Filter_get_maskBits_0"] = asm["_emscripten_bind_b2Filter_get_maskBits_0"];
+var _emscripten_bind_b2Mat22_get_ex_0 = Module["_emscripten_bind_b2Mat22_get_ex_0"] = asm["_emscripten_bind_b2Mat22_get_ex_0"];
 var _emscripten_bind_b2Body_GetFixtureList_0 = Module["_emscripten_bind_b2Body_GetFixtureList_0"] = asm["_emscripten_bind_b2Body_GetFixtureList_0"];
 var _emscripten_bind_b2PulleyJoint___destroy___0 = Module["_emscripten_bind_b2PulleyJoint___destroy___0"] = asm["_emscripten_bind_b2PulleyJoint___destroy___0"];
 var _emscripten_bind_b2MouseJointDef_set_dampingRatio_1 = Module["_emscripten_bind_b2MouseJointDef_set_dampingRatio_1"] = asm["_emscripten_bind_b2MouseJointDef_set_dampingRatio_1"];
@@ -3046,11 +3080,12 @@ var _emscripten_bind_b2ContactListener___destroy___0 = Module["_emscripten_bind_
 var _emscripten_bind_b2PrismaticJointDef_set_localAnchorB_1 = Module["_emscripten_bind_b2PrismaticJointDef_set_localAnchorB_1"] = asm["_emscripten_bind_b2PrismaticJointDef_set_localAnchorB_1"];
 var _emscripten_bind_b2FrictionJoint___destroy___0 = Module["_emscripten_bind_b2FrictionJoint___destroy___0"] = asm["_emscripten_bind_b2FrictionJoint___destroy___0"];
 var _emscripten_bind_b2WeldJoint_Dump_0 = Module["_emscripten_bind_b2WeldJoint_Dump_0"] = asm["_emscripten_bind_b2WeldJoint_Dump_0"];
-var _emscripten_enum_b2LimitState_e_atLowerLimit = Module["_emscripten_enum_b2LimitState_e_atLowerLimit"] = asm["_emscripten_enum_b2LimitState_e_atLowerLimit"];
+var _emscripten_bind_b2MotorJoint_SetMaxForce_1 = Module["_emscripten_bind_b2MotorJoint_SetMaxForce_1"] = asm["_emscripten_bind_b2MotorJoint_SetMaxForce_1"];
+var _emscripten_bind_b2MouseJoint_GetFrequency_0 = Module["_emscripten_bind_b2MouseJoint_GetFrequency_0"] = asm["_emscripten_bind_b2MouseJoint_GetFrequency_0"];
 var _emscripten_bind_b2FrictionJoint_GetLocalAnchorA_0 = Module["_emscripten_bind_b2FrictionJoint_GetLocalAnchorA_0"] = asm["_emscripten_bind_b2FrictionJoint_GetLocalAnchorA_0"];
-var _emscripten_bind_b2JointEdge_get_other_0 = Module["_emscripten_bind_b2JointEdge_get_other_0"] = asm["_emscripten_bind_b2JointEdge_get_other_0"];
+var _emscripten_bind_b2RevoluteJointDef_set_collideConnected_1 = Module["_emscripten_bind_b2RevoluteJointDef_set_collideConnected_1"] = asm["_emscripten_bind_b2RevoluteJointDef_set_collideConnected_1"];
 var _emscripten_bind_b2GearJointDef_set_collideConnected_1 = Module["_emscripten_bind_b2GearJointDef_set_collideConnected_1"] = asm["_emscripten_bind_b2GearJointDef_set_collideConnected_1"];
-var _emscripten_bind_b2RayCastOutput_set_fraction_1 = Module["_emscripten_bind_b2RayCastOutput_set_fraction_1"] = asm["_emscripten_bind_b2RayCastOutput_set_fraction_1"];
+var _emscripten_bind_b2Vec2_IsValid_0 = Module["_emscripten_bind_b2Vec2_IsValid_0"] = asm["_emscripten_bind_b2Vec2_IsValid_0"];
 var _emscripten_bind_b2PrismaticJointDef_set_bodyA_1 = Module["_emscripten_bind_b2PrismaticJointDef_set_bodyA_1"] = asm["_emscripten_bind_b2PrismaticJointDef_set_bodyA_1"];
 var _emscripten_bind_b2World_GetWarmStarting_0 = Module["_emscripten_bind_b2World_GetWarmStarting_0"] = asm["_emscripten_bind_b2World_GetWarmStarting_0"];
 var _emscripten_bind_b2RevoluteJointDef_set_enableLimit_1 = Module["_emscripten_bind_b2RevoluteJointDef_set_enableLimit_1"] = asm["_emscripten_bind_b2RevoluteJointDef_set_enableLimit_1"];
@@ -3066,17 +3101,18 @@ var _emscripten_bind_b2Mat33_Solve33_1 = Module["_emscripten_bind_b2Mat33_Solve3
 var _emscripten_bind_b2WeldJointDef_set_userData_1 = Module["_emscripten_bind_b2WeldJointDef_set_userData_1"] = asm["_emscripten_bind_b2WeldJointDef_set_userData_1"];
 var _emscripten_bind_b2PrismaticJoint_GetLocalAnchorB_0 = Module["_emscripten_bind_b2PrismaticJoint_GetLocalAnchorB_0"] = asm["_emscripten_bind_b2PrismaticJoint_GetLocalAnchorB_0"];
 var _emscripten_bind_b2RevoluteJointDef___destroy___0 = Module["_emscripten_bind_b2RevoluteJointDef___destroy___0"] = asm["_emscripten_bind_b2RevoluteJointDef___destroy___0"];
-var _emscripten_bind_b2MouseJointDef_get_maxForce_0 = Module["_emscripten_bind_b2MouseJointDef_get_maxForce_0"] = asm["_emscripten_bind_b2MouseJointDef_get_maxForce_0"];
+var _emscripten_bind_b2MotorJointDef_get_correctionFactor_0 = Module["_emscripten_bind_b2MotorJointDef_get_correctionFactor_0"] = asm["_emscripten_bind_b2MotorJointDef_get_correctionFactor_0"];
 var _emscripten_bind_b2ContactFeature_get_typeB_0 = Module["_emscripten_bind_b2ContactFeature_get_typeB_0"] = asm["_emscripten_bind_b2ContactFeature_get_typeB_0"];
 var _emscripten_bind_b2ContactID_get_key_0 = Module["_emscripten_bind_b2ContactID_get_key_0"] = asm["_emscripten_bind_b2ContactID_get_key_0"];
+var _emscripten_bind_b2MotorJoint_GetReactionForce_1 = Module["_emscripten_bind_b2MotorJoint_GetReactionForce_1"] = asm["_emscripten_bind_b2MotorJoint_GetReactionForce_1"];
 var _emscripten_bind_b2Rot_GetAngle_0 = Module["_emscripten_bind_b2Rot_GetAngle_0"] = asm["_emscripten_bind_b2Rot_GetAngle_0"];
 var _emscripten_bind_b2World_SetAllowSleeping_1 = Module["_emscripten_bind_b2World_SetAllowSleeping_1"] = asm["_emscripten_bind_b2World_SetAllowSleeping_1"];
 var _emscripten_bind_b2RopeJoint_GetType_0 = Module["_emscripten_bind_b2RopeJoint_GetType_0"] = asm["_emscripten_bind_b2RopeJoint_GetType_0"];
-var _emscripten_enum_b2DrawFlag_e_centerOfMassBit = Module["_emscripten_enum_b2DrawFlag_e_centerOfMassBit"] = asm["_emscripten_enum_b2DrawFlag_e_centerOfMassBit"];
-var _emscripten_bind_b2ManifoldPoint_set_id_1 = Module["_emscripten_bind_b2ManifoldPoint_set_id_1"] = asm["_emscripten_bind_b2ManifoldPoint_set_id_1"];
+var _emscripten_bind_b2MotorJoint_SetAngularOffset_1 = Module["_emscripten_bind_b2MotorJoint_SetAngularOffset_1"] = asm["_emscripten_bind_b2MotorJoint_SetAngularOffset_1"];
+var _emscripten_bind_b2MotorJoint_GetLinearOffset_0 = Module["_emscripten_bind_b2MotorJoint_GetLinearOffset_0"] = asm["_emscripten_bind_b2MotorJoint_GetLinearOffset_0"];
 var _emscripten_bind_b2FrictionJoint_GetCollideConnected_0 = Module["_emscripten_bind_b2FrictionJoint_GetCollideConnected_0"] = asm["_emscripten_bind_b2FrictionJoint_GetCollideConnected_0"];
 var _emscripten_bind_b2WheelJointDef_set_motorSpeed_1 = Module["_emscripten_bind_b2WheelJointDef_set_motorSpeed_1"] = asm["_emscripten_bind_b2WheelJointDef_set_motorSpeed_1"];
-var _emscripten_bind_b2Mat22_get_ex_0 = Module["_emscripten_bind_b2Mat22_get_ex_0"] = asm["_emscripten_bind_b2Mat22_get_ex_0"];
+var _emscripten_bind_b2MotorJoint_GetAnchorA_0 = Module["_emscripten_bind_b2MotorJoint_GetAnchorA_0"] = asm["_emscripten_bind_b2MotorJoint_GetAnchorA_0"];
 var _emscripten_bind_b2Fixture_GetDensity_0 = Module["_emscripten_bind_b2Fixture_GetDensity_0"] = asm["_emscripten_bind_b2Fixture_GetDensity_0"];
 var _emscripten_bind_b2MouseJointDef_get_type_0 = Module["_emscripten_bind_b2MouseJointDef_get_type_0"] = asm["_emscripten_bind_b2MouseJointDef_get_type_0"];
 var _emscripten_bind_b2Vec2_Set_2 = Module["_emscripten_bind_b2Vec2_Set_2"] = asm["_emscripten_bind_b2Vec2_Set_2"];
@@ -3092,6 +3128,7 @@ var _emscripten_bind_b2RevoluteJointDef_set_referenceAngle_1 = Module["_emscript
 var _emscripten_bind_b2ContactFeature___destroy___0 = Module["_emscripten_bind_b2ContactFeature___destroy___0"] = asm["_emscripten_bind_b2ContactFeature___destroy___0"];
 var _emscripten_bind_b2Color___destroy___0 = Module["_emscripten_bind_b2Color___destroy___0"] = asm["_emscripten_bind_b2Color___destroy___0"];
 var _emscripten_bind_b2DistanceJointDef_set_bodyB_1 = Module["_emscripten_bind_b2DistanceJointDef_set_bodyB_1"] = asm["_emscripten_bind_b2DistanceJointDef_set_bodyB_1"];
+var _emscripten_bind_b2ChainShape_get_m_hasPrevVertex_0 = Module["_emscripten_bind_b2ChainShape_get_m_hasPrevVertex_0"] = asm["_emscripten_bind_b2ChainShape_get_m_hasPrevVertex_0"];
 var _emscripten_bind_b2PulleyJointDef_b2PulleyJointDef_0 = Module["_emscripten_bind_b2PulleyJointDef_b2PulleyJointDef_0"] = asm["_emscripten_bind_b2PulleyJointDef_b2PulleyJointDef_0"];
 var _emscripten_bind_b2RevoluteJoint_GetType_0 = Module["_emscripten_bind_b2RevoluteJoint_GetType_0"] = asm["_emscripten_bind_b2RevoluteJoint_GetType_0"];
 var _emscripten_bind_b2MassData_b2MassData_0 = Module["_emscripten_bind_b2MassData_b2MassData_0"] = asm["_emscripten_bind_b2MassData_b2MassData_0"];
@@ -3103,13 +3140,13 @@ var _emscripten_bind_b2PrismaticJoint_GetBodyA_0 = Module["_emscripten_bind_b2Pr
 var _emscripten_bind_b2PrismaticJoint_GetMaxMotorForce_0 = Module["_emscripten_bind_b2PrismaticJoint_GetMaxMotorForce_0"] = asm["_emscripten_bind_b2PrismaticJoint_GetMaxMotorForce_0"];
 var _emscripten_bind_b2RevoluteJointDef_get_upperAngle_0 = Module["_emscripten_bind_b2RevoluteJointDef_get_upperAngle_0"] = asm["_emscripten_bind_b2RevoluteJointDef_get_upperAngle_0"];
 var _emscripten_bind_b2Body_IsSleepingAllowed_0 = Module["_emscripten_bind_b2Body_IsSleepingAllowed_0"] = asm["_emscripten_bind_b2Body_IsSleepingAllowed_0"];
+var _emscripten_bind_b2MotorJoint_GetCorrectionFactor_0 = Module["_emscripten_bind_b2MotorJoint_GetCorrectionFactor_0"] = asm["_emscripten_bind_b2MotorJoint_GetCorrectionFactor_0"];
 var _emscripten_bind_b2Profile_get_solve_0 = Module["_emscripten_bind_b2Profile_get_solve_0"] = asm["_emscripten_bind_b2Profile_get_solve_0"];
 var _emscripten_bind_JSDestructionListener_SayGoodbyeFixture_1 = Module["_emscripten_bind_JSDestructionListener_SayGoodbyeFixture_1"] = asm["_emscripten_bind_JSDestructionListener_SayGoodbyeFixture_1"];
 var _emscripten_bind_b2PolygonShape_GetVertexCount_0 = Module["_emscripten_bind_b2PolygonShape_GetVertexCount_0"] = asm["_emscripten_bind_b2PolygonShape_GetVertexCount_0"];
 var _emscripten_bind_b2Rot_get_c_0 = Module["_emscripten_bind_b2Rot_get_c_0"] = asm["_emscripten_bind_b2Rot_get_c_0"];
-var _emscripten_bind_b2Vec2_IsValid_0 = Module["_emscripten_bind_b2Vec2_IsValid_0"] = asm["_emscripten_bind_b2Vec2_IsValid_0"];
 var _emscripten_bind_b2AABB_set_lowerBound_1 = Module["_emscripten_bind_b2AABB_set_lowerBound_1"] = asm["_emscripten_bind_b2AABB_set_lowerBound_1"];
-var _emscripten_bind_b2Body_ApplyTorque_1 = Module["_emscripten_bind_b2Body_ApplyTorque_1"] = asm["_emscripten_bind_b2Body_ApplyTorque_1"];
+var _emscripten_bind_b2Fixture_SetFilterData_1 = Module["_emscripten_bind_b2Fixture_SetFilterData_1"] = asm["_emscripten_bind_b2Fixture_SetFilterData_1"];
 var _emscripten_bind_b2MouseJoint_SetMaxForce_1 = Module["_emscripten_bind_b2MouseJoint_SetMaxForce_1"] = asm["_emscripten_bind_b2MouseJoint_SetMaxForce_1"];
 var _emscripten_bind_b2WheelJoint_IsMotorEnabled_0 = Module["_emscripten_bind_b2WheelJoint_IsMotorEnabled_0"] = asm["_emscripten_bind_b2WheelJoint_IsMotorEnabled_0"];
 var _emscripten_bind_b2JointDef_set_userData_1 = Module["_emscripten_bind_b2JointDef_set_userData_1"] = asm["_emscripten_bind_b2JointDef_set_userData_1"];
@@ -3119,6 +3156,7 @@ var _emscripten_bind_b2WeldJointDef_get_dampingRatio_0 = Module["_emscripten_bin
 var _emscripten_bind_b2Rot_SetIdentity_0 = Module["_emscripten_bind_b2Rot_SetIdentity_0"] = asm["_emscripten_bind_b2Rot_SetIdentity_0"];
 var _emscripten_bind_b2EdgeShape_b2EdgeShape_0 = Module["_emscripten_bind_b2EdgeShape_b2EdgeShape_0"] = asm["_emscripten_bind_b2EdgeShape_b2EdgeShape_0"];
 var _emscripten_bind_b2FrictionJoint_GetReactionForce_1 = Module["_emscripten_bind_b2FrictionJoint_GetReactionForce_1"] = asm["_emscripten_bind_b2FrictionJoint_GetReactionForce_1"];
+var _emscripten_bind_b2MouseJoint_GetUserData_0 = Module["_emscripten_bind_b2MouseJoint_GetUserData_0"] = asm["_emscripten_bind_b2MouseJoint_GetUserData_0"];
 var _emscripten_bind_b2DistanceJointDef_set_type_1 = Module["_emscripten_bind_b2DistanceJointDef_set_type_1"] = asm["_emscripten_bind_b2DistanceJointDef_set_type_1"];
 var _emscripten_bind_b2WeldJoint_GetAnchorA_0 = Module["_emscripten_bind_b2WeldJoint_GetAnchorA_0"] = asm["_emscripten_bind_b2WeldJoint_GetAnchorA_0"];
 var _emscripten_bind_b2WeldJoint___destroy___0 = Module["_emscripten_bind_b2WeldJoint___destroy___0"] = asm["_emscripten_bind_b2WeldJoint___destroy___0"];
@@ -3127,18 +3165,19 @@ var _emscripten_bind_JSContactListener_PostSolve_2 = Module["_emscripten_bind_JS
 var _emscripten_bind_b2PulleyJoint_GetBodyA_0 = Module["_emscripten_bind_b2PulleyJoint_GetBodyA_0"] = asm["_emscripten_bind_b2PulleyJoint_GetBodyA_0"];
 var _emscripten_bind_b2RopeJointDef_get_type_0 = Module["_emscripten_bind_b2RopeJointDef_get_type_0"] = asm["_emscripten_bind_b2RopeJointDef_get_type_0"];
 var _emscripten_bind_b2CircleShape_ComputeMass_2 = Module["_emscripten_bind_b2CircleShape_ComputeMass_2"] = asm["_emscripten_bind_b2CircleShape_ComputeMass_2"];
-var _emscripten_bind_b2PrismaticJointDef_get_referenceAngle_0 = Module["_emscripten_bind_b2PrismaticJointDef_get_referenceAngle_0"] = asm["_emscripten_bind_b2PrismaticJointDef_get_referenceAngle_0"];
+var _emscripten_bind_b2DistanceJointDef_get_localAnchorB_0 = Module["_emscripten_bind_b2DistanceJointDef_get_localAnchorB_0"] = asm["_emscripten_bind_b2DistanceJointDef_get_localAnchorB_0"];
 var _emscripten_bind_b2GearJointDef___destroy___0 = Module["_emscripten_bind_b2GearJointDef___destroy___0"] = asm["_emscripten_bind_b2GearJointDef___destroy___0"];
 var _emscripten_bind_b2PulleyJointDef_set_localAnchorA_1 = Module["_emscripten_bind_b2PulleyJointDef_set_localAnchorA_1"] = asm["_emscripten_bind_b2PulleyJointDef_set_localAnchorA_1"];
 var _emscripten_bind_b2CircleShape_TestPoint_2 = Module["_emscripten_bind_b2CircleShape_TestPoint_2"] = asm["_emscripten_bind_b2CircleShape_TestPoint_2"];
+var _emscripten_bind_b2MotorJointDef_get_maxTorque_0 = Module["_emscripten_bind_b2MotorJointDef_get_maxTorque_0"] = asm["_emscripten_bind_b2MotorJointDef_get_maxTorque_0"];
 var _emscripten_bind_b2Body_GetLinearVelocityFromLocalPoint_1 = Module["_emscripten_bind_b2Body_GetLinearVelocityFromLocalPoint_1"] = asm["_emscripten_bind_b2Body_GetLinearVelocityFromLocalPoint_1"];
 var _emscripten_bind_b2FrictionJointDef_set_bodyB_1 = Module["_emscripten_bind_b2FrictionJointDef_set_bodyB_1"] = asm["_emscripten_bind_b2FrictionJointDef_set_bodyB_1"];
 var _emscripten_bind_b2MouseJoint_GetAnchorB_0 = Module["_emscripten_bind_b2MouseJoint_GetAnchorB_0"] = asm["_emscripten_bind_b2MouseJoint_GetAnchorB_0"];
-var _emscripten_bind_b2Manifold_get_localPoint_0 = Module["_emscripten_bind_b2Manifold_get_localPoint_0"] = asm["_emscripten_bind_b2Manifold_get_localPoint_0"];
+var _emscripten_bind_b2RopeJointDef_get_localAnchorB_0 = Module["_emscripten_bind_b2RopeJointDef_get_localAnchorB_0"] = asm["_emscripten_bind_b2RopeJointDef_get_localAnchorB_0"];
 var _emscripten_bind_b2GearJoint_GetBodyB_0 = Module["_emscripten_bind_b2GearJoint_GetBodyB_0"] = asm["_emscripten_bind_b2GearJoint_GetBodyB_0"];
-var _emscripten_bind_b2WeldJoint_GetLocalAnchorB_0 = Module["_emscripten_bind_b2WeldJoint_GetLocalAnchorB_0"] = asm["_emscripten_bind_b2WeldJoint_GetLocalAnchorB_0"];
+var _emscripten_bind_b2ChainShape_Clear_0 = Module["_emscripten_bind_b2ChainShape_Clear_0"] = asm["_emscripten_bind_b2ChainShape_Clear_0"];
 var _emscripten_bind_b2CircleShape___destroy___0 = Module["_emscripten_bind_b2CircleShape___destroy___0"] = asm["_emscripten_bind_b2CircleShape___destroy___0"];
-var _emscripten_bind_b2EdgeShape___destroy___0 = Module["_emscripten_bind_b2EdgeShape___destroy___0"] = asm["_emscripten_bind_b2EdgeShape___destroy___0"];
+var _emscripten_bind_b2MotorJoint_GetType_0 = Module["_emscripten_bind_b2MotorJoint_GetType_0"] = asm["_emscripten_bind_b2MotorJoint_GetType_0"];
 var _emscripten_bind_b2World_GetContactCount_0 = Module["_emscripten_bind_b2World_GetContactCount_0"] = asm["_emscripten_bind_b2World_GetContactCount_0"];
 var _emscripten_bind_b2Contact_SetRestitution_1 = Module["_emscripten_bind_b2Contact_SetRestitution_1"] = asm["_emscripten_bind_b2Contact_SetRestitution_1"];
 var _emscripten_bind_b2BodyDef_get_angularDamping_0 = Module["_emscripten_bind_b2BodyDef_get_angularDamping_0"] = asm["_emscripten_bind_b2BodyDef_get_angularDamping_0"];
@@ -3152,19 +3191,18 @@ var _emscripten_bind_b2MouseJointDef_set_collideConnected_1 = Module["_emscripte
 var _emscripten_bind_b2ContactFeature_set_indexB_1 = Module["_emscripten_bind_b2ContactFeature_set_indexB_1"] = asm["_emscripten_bind_b2ContactFeature_set_indexB_1"];
 var _emscripten_bind_b2Body_GetLinearVelocityFromWorldPoint_1 = Module["_emscripten_bind_b2Body_GetLinearVelocityFromWorldPoint_1"] = asm["_emscripten_bind_b2Body_GetLinearVelocityFromWorldPoint_1"];
 var _emscripten_bind_b2WeldJoint_GetCollideConnected_0 = Module["_emscripten_bind_b2WeldJoint_GetCollideConnected_0"] = asm["_emscripten_bind_b2WeldJoint_GetCollideConnected_0"];
-var _emscripten_bind_b2WeldJointDef_get_bodyA_0 = Module["_emscripten_bind_b2WeldJointDef_get_bodyA_0"] = asm["_emscripten_bind_b2WeldJointDef_get_bodyA_0"];
 var _emscripten_bind_b2Mat22_GetInverse_0 = Module["_emscripten_bind_b2Mat22_GetInverse_0"] = asm["_emscripten_bind_b2Mat22_GetInverse_0"];
 var _emscripten_bind_b2WheelJointDef_set_frequencyHz_1 = Module["_emscripten_bind_b2WheelJointDef_set_frequencyHz_1"] = asm["_emscripten_bind_b2WheelJointDef_set_frequencyHz_1"];
 var _emscripten_bind_b2World_GetSubStepping_0 = Module["_emscripten_bind_b2World_GetSubStepping_0"] = asm["_emscripten_bind_b2World_GetSubStepping_0"];
 var _emscripten_bind_b2Rot_GetYAxis_0 = Module["_emscripten_bind_b2Rot_GetYAxis_0"] = asm["_emscripten_bind_b2Rot_GetYAxis_0"];
-var _emscripten_bind_b2GearJointDef_set_bodyA_1 = Module["_emscripten_bind_b2GearJointDef_set_bodyA_1"] = asm["_emscripten_bind_b2GearJointDef_set_bodyA_1"];
+var _emscripten_bind_b2PrismaticJoint_EnableMotor_1 = Module["_emscripten_bind_b2PrismaticJoint_EnableMotor_1"] = asm["_emscripten_bind_b2PrismaticJoint_EnableMotor_1"];
 var _emscripten_bind_b2WheelJointDef_get_localAxisA_0 = Module["_emscripten_bind_b2WheelJointDef_get_localAxisA_0"] = asm["_emscripten_bind_b2WheelJointDef_get_localAxisA_0"];
 var _emscripten_bind_b2RopeJoint_GetBodyB_0 = Module["_emscripten_bind_b2RopeJoint_GetBodyB_0"] = asm["_emscripten_bind_b2RopeJoint_GetBodyB_0"];
 var _emscripten_bind_b2EdgeShape_GetType_0 = Module["_emscripten_bind_b2EdgeShape_GetType_0"] = asm["_emscripten_bind_b2EdgeShape_GetType_0"];
 var _emscripten_bind_b2Mat22_set_ex_1 = Module["_emscripten_bind_b2Mat22_set_ex_1"] = asm["_emscripten_bind_b2Mat22_set_ex_1"];
 var _emscripten_bind_b2ManifoldPoint___destroy___0 = Module["_emscripten_bind_b2ManifoldPoint___destroy___0"] = asm["_emscripten_bind_b2ManifoldPoint___destroy___0"];
 var _emscripten_enum_b2JointType_e_prismaticJoint = Module["_emscripten_enum_b2JointType_e_prismaticJoint"] = asm["_emscripten_enum_b2JointType_e_prismaticJoint"];
-var _emscripten_bind_b2World_CreateBody_1 = Module["_emscripten_bind_b2World_CreateBody_1"] = asm["_emscripten_bind_b2World_CreateBody_1"];
+var _emscripten_bind_b2WeldJointDef_get_referenceAngle_0 = Module["_emscripten_bind_b2WeldJointDef_get_referenceAngle_0"] = asm["_emscripten_bind_b2WeldJointDef_get_referenceAngle_0"];
 var _emscripten_bind_b2Vec2_Length_0 = Module["_emscripten_bind_b2Vec2_Length_0"] = asm["_emscripten_bind_b2Vec2_Length_0"];
 var _emscripten_bind_b2Vec2_SetZero_0 = Module["_emscripten_bind_b2Vec2_SetZero_0"] = asm["_emscripten_bind_b2Vec2_SetZero_0"];
 var _emscripten_bind_b2RopeJoint___destroy___0 = Module["_emscripten_bind_b2RopeJoint___destroy___0"] = asm["_emscripten_bind_b2RopeJoint___destroy___0"];
@@ -3178,6 +3216,7 @@ var _emscripten_bind_b2EdgeShape_ComputeAABB_3 = Module["_emscripten_bind_b2Edge
 var _emscripten_bind_b2PolygonShape_set_m_centroid_1 = Module["_emscripten_bind_b2PolygonShape_set_m_centroid_1"] = asm["_emscripten_bind_b2PolygonShape_set_m_centroid_1"];
 var _emscripten_bind_b2WheelJointDef_set_collideConnected_1 = Module["_emscripten_bind_b2WheelJointDef_set_collideConnected_1"] = asm["_emscripten_bind_b2WheelJointDef_set_collideConnected_1"];
 var _emscripten_bind_b2World_GetJointList_0 = Module["_emscripten_bind_b2World_GetJointList_0"] = asm["_emscripten_bind_b2World_GetJointList_0"];
+var _emscripten_bind_b2MotorJointDef_get_type_0 = Module["_emscripten_bind_b2MotorJointDef_get_type_0"] = asm["_emscripten_bind_b2MotorJointDef_get_type_0"];
 var _emscripten_bind_b2RopeJoint_GetLocalAnchorA_0 = Module["_emscripten_bind_b2RopeJoint_GetLocalAnchorA_0"] = asm["_emscripten_bind_b2RopeJoint_GetLocalAnchorA_0"];
 var _emscripten_bind_b2BodyDef_set_linearDamping_1 = Module["_emscripten_bind_b2BodyDef_set_linearDamping_1"] = asm["_emscripten_bind_b2BodyDef_set_linearDamping_1"];
 var _emscripten_bind_b2FrictionJoint_GetUserData_0 = Module["_emscripten_bind_b2FrictionJoint_GetUserData_0"] = asm["_emscripten_bind_b2FrictionJoint_GetUserData_0"];
@@ -3186,14 +3225,14 @@ var _emscripten_bind_b2Manifold_set_localNormal_1 = Module["_emscripten_bind_b2M
 var _emscripten_bind_b2JointDef_get_bodyA_0 = Module["_emscripten_bind_b2JointDef_get_bodyA_0"] = asm["_emscripten_bind_b2JointDef_get_bodyA_0"];
 var _emscripten_bind_b2Body_GetLinearDamping_0 = Module["_emscripten_bind_b2Body_GetLinearDamping_0"] = asm["_emscripten_bind_b2Body_GetLinearDamping_0"];
 var _emscripten_bind_b2WeldJointDef_set_frequencyHz_1 = Module["_emscripten_bind_b2WeldJointDef_set_frequencyHz_1"] = asm["_emscripten_bind_b2WeldJointDef_set_frequencyHz_1"];
-var _emscripten_bind_b2Body_ResetMassData_0 = Module["_emscripten_bind_b2Body_ResetMassData_0"] = asm["_emscripten_bind_b2Body_ResetMassData_0"];
+var _emscripten_bind_b2BodyDef_set_userData_1 = Module["_emscripten_bind_b2BodyDef_set_userData_1"] = asm["_emscripten_bind_b2BodyDef_set_userData_1"];
 var _emscripten_bind_b2PrismaticJointDef_set_enableMotor_1 = Module["_emscripten_bind_b2PrismaticJointDef_set_enableMotor_1"] = asm["_emscripten_bind_b2PrismaticJointDef_set_enableMotor_1"];
 var _emscripten_bind_b2Vec2_Skew_0 = Module["_emscripten_bind_b2Vec2_Skew_0"] = asm["_emscripten_bind_b2Vec2_Skew_0"];
 var _emscripten_bind_b2MouseJoint_GetDampingRatio_0 = Module["_emscripten_bind_b2MouseJoint_GetDampingRatio_0"] = asm["_emscripten_bind_b2MouseJoint_GetDampingRatio_0"];
 var _emscripten_bind_b2RevoluteJoint_GetAnchorA_0 = Module["_emscripten_bind_b2RevoluteJoint_GetAnchorA_0"] = asm["_emscripten_bind_b2RevoluteJoint_GetAnchorA_0"];
-var _emscripten_bind_b2ChainShape_set_m_prevVertex_1 = Module["_emscripten_bind_b2ChainShape_set_m_prevVertex_1"] = asm["_emscripten_bind_b2ChainShape_set_m_prevVertex_1"];
-var _emscripten_bind_b2ManifoldPoint_get_localPoint_0 = Module["_emscripten_bind_b2ManifoldPoint_get_localPoint_0"] = asm["_emscripten_bind_b2ManifoldPoint_get_localPoint_0"];
-var _emscripten_bind_b2ChainShape_get_m_hasPrevVertex_0 = Module["_emscripten_bind_b2ChainShape_get_m_hasPrevVertex_0"] = asm["_emscripten_bind_b2ChainShape_get_m_hasPrevVertex_0"];
+var _emscripten_bind_b2ContactFeature_set_typeB_1 = Module["_emscripten_bind_b2ContactFeature_set_typeB_1"] = asm["_emscripten_bind_b2ContactFeature_set_typeB_1"];
+var _emscripten_bind_b2WheelJoint_GetAnchorA_0 = Module["_emscripten_bind_b2WheelJoint_GetAnchorA_0"] = asm["_emscripten_bind_b2WheelJoint_GetAnchorA_0"];
+var _emscripten_bind_b2MotorJoint_GetMaxTorque_0 = Module["_emscripten_bind_b2MotorJoint_GetMaxTorque_0"] = asm["_emscripten_bind_b2MotorJoint_GetMaxTorque_0"];
 var _emscripten_bind_b2PrismaticJointDef_set_userData_1 = Module["_emscripten_bind_b2PrismaticJointDef_set_userData_1"] = asm["_emscripten_bind_b2PrismaticJointDef_set_userData_1"];
 var _emscripten_bind_b2FrictionJointDef_set_type_1 = Module["_emscripten_bind_b2FrictionJointDef_set_type_1"] = asm["_emscripten_bind_b2FrictionJointDef_set_type_1"];
 var _emscripten_bind_b2FrictionJointDef_Initialize_3 = Module["_emscripten_bind_b2FrictionJointDef_Initialize_3"] = asm["_emscripten_bind_b2FrictionJointDef_Initialize_3"];
@@ -3206,6 +3245,7 @@ var _emscripten_bind_b2MassData_get_I_0 = Module["_emscripten_bind_b2MassData_ge
 var _emscripten_bind_b2WheelJointDef_get_motorSpeed_0 = Module["_emscripten_bind_b2WheelJointDef_get_motorSpeed_0"] = asm["_emscripten_bind_b2WheelJointDef_get_motorSpeed_0"];
 var _emscripten_bind_b2Filter_set_maskBits_1 = Module["_emscripten_bind_b2Filter_set_maskBits_1"] = asm["_emscripten_bind_b2Filter_set_maskBits_1"];
 var _emscripten_bind_b2WheelJoint_GetCollideConnected_0 = Module["_emscripten_bind_b2WheelJoint_GetCollideConnected_0"] = asm["_emscripten_bind_b2WheelJoint_GetCollideConnected_0"];
+var _emscripten_bind_b2EdgeShape_get_m_radius_0 = Module["_emscripten_bind_b2EdgeShape_get_m_radius_0"] = asm["_emscripten_bind_b2EdgeShape_get_m_radius_0"];
 var _emscripten_bind_b2World_GetTreeHeight_0 = Module["_emscripten_bind_b2World_GetTreeHeight_0"] = asm["_emscripten_bind_b2World_GetTreeHeight_0"];
 var _emscripten_bind_b2Mat22_b2Mat22_2 = Module["_emscripten_bind_b2Mat22_b2Mat22_2"] = asm["_emscripten_bind_b2Mat22_b2Mat22_2"];
 var _emscripten_bind_b2PrismaticJoint_GetNext_0 = Module["_emscripten_bind_b2PrismaticJoint_GetNext_0"] = asm["_emscripten_bind_b2PrismaticJoint_GetNext_0"];
@@ -3214,7 +3254,7 @@ var _emscripten_bind_b2PrismaticJointDef_get_bodyA_0 = Module["_emscripten_bind_
 var _emscripten_bind_b2RopeJointDef_set_localAnchorA_1 = Module["_emscripten_bind_b2RopeJointDef_set_localAnchorA_1"] = asm["_emscripten_bind_b2RopeJointDef_set_localAnchorA_1"];
 var _emscripten_bind_b2ChainShape_set_m_hasNextVertex_1 = Module["_emscripten_bind_b2ChainShape_set_m_hasNextVertex_1"] = asm["_emscripten_bind_b2ChainShape_set_m_hasNextVertex_1"];
 var _emscripten_bind_b2Mat22_set_ey_1 = Module["_emscripten_bind_b2Mat22_set_ey_1"] = asm["_emscripten_bind_b2Mat22_set_ey_1"];
-var _emscripten_bind_b2PrismaticJoint_EnableMotor_1 = Module["_emscripten_bind_b2PrismaticJoint_EnableMotor_1"] = asm["_emscripten_bind_b2PrismaticJoint_EnableMotor_1"];
+var _emscripten_bind_b2MotorJointDef_set_angularOffset_1 = Module["_emscripten_bind_b2MotorJointDef_set_angularOffset_1"] = asm["_emscripten_bind_b2MotorJointDef_set_angularOffset_1"];
 var _emscripten_bind_b2CircleShape_get_m_type_0 = Module["_emscripten_bind_b2CircleShape_get_m_type_0"] = asm["_emscripten_bind_b2CircleShape_get_m_type_0"];
 var _emscripten_bind_b2Body_GetType_0 = Module["_emscripten_bind_b2Body_GetType_0"] = asm["_emscripten_bind_b2Body_GetType_0"];
 var _emscripten_bind_b2ContactEdge_b2ContactEdge_0 = Module["_emscripten_bind_b2ContactEdge_b2ContactEdge_0"] = asm["_emscripten_bind_b2ContactEdge_b2ContactEdge_0"];
@@ -3227,13 +3267,16 @@ var _emscripten_bind_b2DistanceJointDef_set_bodyA_1 = Module["_emscripten_bind_b
 var runPostSets = Module["runPostSets"] = asm["runPostSets"];
 var _emscripten_bind_b2RevoluteJoint_SetLimits_2 = Module["_emscripten_bind_b2RevoluteJoint_SetLimits_2"] = asm["_emscripten_bind_b2RevoluteJoint_SetLimits_2"];
 var _emscripten_bind_b2WeldJointDef_set_type_1 = Module["_emscripten_bind_b2WeldJointDef_set_type_1"] = asm["_emscripten_bind_b2WeldJointDef_set_type_1"];
+var _emscripten_bind_b2MotorJointDef___destroy___0 = Module["_emscripten_bind_b2MotorJointDef___destroy___0"] = asm["_emscripten_bind_b2MotorJointDef___destroy___0"];
 var _emscripten_bind_b2FrictionJoint_GetNext_0 = Module["_emscripten_bind_b2FrictionJoint_GetNext_0"] = asm["_emscripten_bind_b2FrictionJoint_GetNext_0"];
 var _emscripten_bind_b2Shape_set_m_type_1 = Module["_emscripten_bind_b2Shape_set_m_type_1"] = asm["_emscripten_bind_b2Shape_set_m_type_1"];
 var _emscripten_bind_b2WheelJoint_GetJointTranslation_0 = Module["_emscripten_bind_b2WheelJoint_GetJointTranslation_0"] = asm["_emscripten_bind_b2WheelJoint_GetJointTranslation_0"];
 var _emscripten_bind_b2WheelJoint_GetMotorTorque_1 = Module["_emscripten_bind_b2WheelJoint_GetMotorTorque_1"] = asm["_emscripten_bind_b2WheelJoint_GetMotorTorque_1"];
 var _emscripten_bind_b2RopeJoint_SetUserData_1 = Module["_emscripten_bind_b2RopeJoint_SetUserData_1"] = asm["_emscripten_bind_b2RopeJoint_SetUserData_1"];
+var _emscripten_bind_b2RopeJointDef___destroy___0 = Module["_emscripten_bind_b2RopeJointDef___destroy___0"] = asm["_emscripten_bind_b2RopeJointDef___destroy___0"];
 var _emscripten_bind_b2WheelJoint_IsActive_0 = Module["_emscripten_bind_b2WheelJoint_IsActive_0"] = asm["_emscripten_bind_b2WheelJoint_IsActive_0"];
 var _emscripten_bind_b2PrismaticJointDef_get_enableMotor_0 = Module["_emscripten_bind_b2PrismaticJointDef_get_enableMotor_0"] = asm["_emscripten_bind_b2PrismaticJointDef_get_enableMotor_0"];
+var _emscripten_bind_b2MotorJointDef_set_bodyB_1 = Module["_emscripten_bind_b2MotorJointDef_set_bodyB_1"] = asm["_emscripten_bind_b2MotorJointDef_set_bodyB_1"];
 var _emscripten_bind_JSDestructionListener___destroy___0 = Module["_emscripten_bind_JSDestructionListener___destroy___0"] = asm["_emscripten_bind_JSDestructionListener___destroy___0"];
 var _emscripten_bind_b2Transform_b2Transform_2 = Module["_emscripten_bind_b2Transform_b2Transform_2"] = asm["_emscripten_bind_b2Transform_b2Transform_2"];
 var _emscripten_bind_b2WeldJoint_GetReactionForce_1 = Module["_emscripten_bind_b2WeldJoint_GetReactionForce_1"] = asm["_emscripten_bind_b2WeldJoint_GetReactionForce_1"];
@@ -3241,7 +3284,7 @@ var _emscripten_bind_b2ChainShape_RayCast_4 = Module["_emscripten_bind_b2ChainSh
 var _emscripten_bind_b2Vec2_set_y_1 = Module["_emscripten_bind_b2Vec2_set_y_1"] = asm["_emscripten_bind_b2Vec2_set_y_1"];
 var _emscripten_bind_b2PrismaticJoint_SetMotorSpeed_1 = Module["_emscripten_bind_b2PrismaticJoint_SetMotorSpeed_1"] = asm["_emscripten_bind_b2PrismaticJoint_SetMotorSpeed_1"];
 var _emscripten_bind_b2ContactID_get_cf_0 = Module["_emscripten_bind_b2ContactID_get_cf_0"] = asm["_emscripten_bind_b2ContactID_get_cf_0"];
-var _emscripten_bind_b2MouseJointDef_set_frequencyHz_1 = Module["_emscripten_bind_b2MouseJointDef_set_frequencyHz_1"] = asm["_emscripten_bind_b2MouseJointDef_set_frequencyHz_1"];
+var _emscripten_bind_b2DistanceJointDef_Initialize_4 = Module["_emscripten_bind_b2DistanceJointDef_Initialize_4"] = asm["_emscripten_bind_b2DistanceJointDef_Initialize_4"];
 var _emscripten_bind_b2ChainShape_get_m_radius_0 = Module["_emscripten_bind_b2ChainShape_get_m_radius_0"] = asm["_emscripten_bind_b2ChainShape_get_m_radius_0"];
 var _emscripten_bind_b2WeldJointDef_set_localAnchorB_1 = Module["_emscripten_bind_b2WeldJointDef_set_localAnchorB_1"] = asm["_emscripten_bind_b2WeldJointDef_set_localAnchorB_1"];
 var _emscripten_bind_b2ChainShape_set_m_radius_1 = Module["_emscripten_bind_b2ChainShape_set_m_radius_1"] = asm["_emscripten_bind_b2ChainShape_set_m_radius_1"];
@@ -3279,10 +3322,12 @@ var _emscripten_bind_b2Contact_GetManifold_0 = Module["_emscripten_bind_b2Contac
 var _emscripten_bind_b2QueryCallback___destroy___0 = Module["_emscripten_bind_b2QueryCallback___destroy___0"] = asm["_emscripten_bind_b2QueryCallback___destroy___0"];
 var _emscripten_bind_b2WeldJointDef_get_localAnchorA_0 = Module["_emscripten_bind_b2WeldJointDef_get_localAnchorA_0"] = asm["_emscripten_bind_b2WeldJointDef_get_localAnchorA_0"];
 var _emscripten_bind_b2MouseJoint_SetUserData_1 = Module["_emscripten_bind_b2MouseJoint_SetUserData_1"] = asm["_emscripten_bind_b2MouseJoint_SetUserData_1"];
-var _emscripten_bind_b2RevoluteJointDef_set_collideConnected_1 = Module["_emscripten_bind_b2RevoluteJointDef_set_collideConnected_1"] = asm["_emscripten_bind_b2RevoluteJointDef_set_collideConnected_1"];
+var _emscripten_bind_b2MotorJointDef_set_correctionFactor_1 = Module["_emscripten_bind_b2MotorJointDef_set_correctionFactor_1"] = asm["_emscripten_bind_b2MotorJointDef_set_correctionFactor_1"];
 var _emscripten_bind_b2ChainShape_GetChildEdge_2 = Module["_emscripten_bind_b2ChainShape_GetChildEdge_2"] = asm["_emscripten_bind_b2ChainShape_GetChildEdge_2"];
 var _emscripten_enum_b2JointType_e_mouseJoint = Module["_emscripten_enum_b2JointType_e_mouseJoint"] = asm["_emscripten_enum_b2JointType_e_mouseJoint"];
+var _emscripten_bind_b2MotorJointDef_get_angularOffset_0 = Module["_emscripten_bind_b2MotorJointDef_get_angularOffset_0"] = asm["_emscripten_bind_b2MotorJointDef_get_angularOffset_0"];
 var _emscripten_bind_b2WheelJoint_SetUserData_1 = Module["_emscripten_bind_b2WheelJoint_SetUserData_1"] = asm["_emscripten_bind_b2WheelJoint_SetUserData_1"];
+var _emscripten_bind_b2Body_ApplyForce_3 = Module["_emscripten_bind_b2Body_ApplyForce_3"] = asm["_emscripten_bind_b2Body_ApplyForce_3"];
 var _emscripten_bind_b2ChainShape_set_m_count_1 = Module["_emscripten_bind_b2ChainShape_set_m_count_1"] = asm["_emscripten_bind_b2ChainShape_set_m_count_1"];
 var _emscripten_bind_b2DistanceJoint_GetCollideConnected_0 = Module["_emscripten_bind_b2DistanceJoint_GetCollideConnected_0"] = asm["_emscripten_bind_b2DistanceJoint_GetCollideConnected_0"];
 var _emscripten_bind_b2RevoluteJoint_IsMotorEnabled_0 = Module["_emscripten_bind_b2RevoluteJoint_IsMotorEnabled_0"] = asm["_emscripten_bind_b2RevoluteJoint_IsMotorEnabled_0"];
@@ -3297,7 +3342,8 @@ var _emscripten_bind_b2Mat33_set_ex_1 = Module["_emscripten_bind_b2Mat33_set_ex_
 var _emscripten_bind_b2PulleyJointDef_get_localAnchorB_0 = Module["_emscripten_bind_b2PulleyJointDef_get_localAnchorB_0"] = asm["_emscripten_bind_b2PulleyJointDef_get_localAnchorB_0"];
 var _emscripten_bind_b2RevoluteJointDef_get_bodyA_0 = Module["_emscripten_bind_b2RevoluteJointDef_get_bodyA_0"] = asm["_emscripten_bind_b2RevoluteJointDef_get_bodyA_0"];
 var _emscripten_bind_b2PrismaticJoint_GetBodyB_0 = Module["_emscripten_bind_b2PrismaticJoint_GetBodyB_0"] = asm["_emscripten_bind_b2PrismaticJoint_GetBodyB_0"];
-var _emscripten_bind_b2DistanceJointDef_Initialize_4 = Module["_emscripten_bind_b2DistanceJointDef_Initialize_4"] = asm["_emscripten_bind_b2DistanceJointDef_Initialize_4"];
+var _emscripten_bind_b2WheelJointDef_set_bodyA_1 = Module["_emscripten_bind_b2WheelJointDef_set_bodyA_1"] = asm["_emscripten_bind_b2WheelJointDef_set_bodyA_1"];
+var _emscripten_bind_b2MotorJointDef_set_maxForce_1 = Module["_emscripten_bind_b2MotorJointDef_set_maxForce_1"] = asm["_emscripten_bind_b2MotorJointDef_set_maxForce_1"];
 var _emscripten_bind_b2BodyDef_get_angle_0 = Module["_emscripten_bind_b2BodyDef_get_angle_0"] = asm["_emscripten_bind_b2BodyDef_get_angle_0"];
 var _emscripten_bind_b2FixtureDef_get_shape_0 = Module["_emscripten_bind_b2FixtureDef_get_shape_0"] = asm["_emscripten_bind_b2FixtureDef_get_shape_0"];
 var _emscripten_bind_b2Body_SetAngularVelocity_1 = Module["_emscripten_bind_b2Body_SetAngularVelocity_1"] = asm["_emscripten_bind_b2Body_SetAngularVelocity_1"];
@@ -3315,14 +3361,14 @@ var _emscripten_bind_b2Transform_get_p_0 = Module["_emscripten_bind_b2Transform_
 var _emscripten_enum_b2BodyType_b2_dynamicBody = Module["_emscripten_enum_b2BodyType_b2_dynamicBody"] = asm["_emscripten_enum_b2BodyType_b2_dynamicBody"];
 var _emscripten_bind_b2World_GetProfile_0 = Module["_emscripten_bind_b2World_GetProfile_0"] = asm["_emscripten_bind_b2World_GetProfile_0"];
 var _emscripten_bind_b2DistanceJointDef___destroy___0 = Module["_emscripten_bind_b2DistanceJointDef___destroy___0"] = asm["_emscripten_bind_b2DistanceJointDef___destroy___0"];
-var _emscripten_bind_b2RopeJointDef_set_bodyA_1 = Module["_emscripten_bind_b2RopeJointDef_set_bodyA_1"] = asm["_emscripten_bind_b2RopeJointDef_set_bodyA_1"];
+var _emscripten_bind_b2GearJointDef_set_bodyA_1 = Module["_emscripten_bind_b2GearJointDef_set_bodyA_1"] = asm["_emscripten_bind_b2GearJointDef_set_bodyA_1"];
 var _emscripten_bind_b2JointDef_set_type_1 = Module["_emscripten_bind_b2JointDef_set_type_1"] = asm["_emscripten_bind_b2JointDef_set_type_1"];
 var _emscripten_bind_b2ContactEdge_set_contact_1 = Module["_emscripten_bind_b2ContactEdge_set_contact_1"] = asm["_emscripten_bind_b2ContactEdge_set_contact_1"];
+var _emscripten_bind_b2MotorJointDef_get_userData_0 = Module["_emscripten_bind_b2MotorJointDef_get_userData_0"] = asm["_emscripten_bind_b2MotorJointDef_get_userData_0"];
 var _emscripten_bind_b2World_GetContactList_0 = Module["_emscripten_bind_b2World_GetContactList_0"] = asm["_emscripten_bind_b2World_GetContactList_0"];
 var _emscripten_bind_b2Mat33_set_ez_1 = Module["_emscripten_bind_b2Mat33_set_ez_1"] = asm["_emscripten_bind_b2Mat33_set_ez_1"];
 var _emscripten_bind_b2JointEdge_b2JointEdge_0 = Module["_emscripten_bind_b2JointEdge_b2JointEdge_0"] = asm["_emscripten_bind_b2JointEdge_b2JointEdge_0"];
 var _emscripten_bind_b2FrictionJointDef_get_bodyA_0 = Module["_emscripten_bind_b2FrictionJointDef_get_bodyA_0"] = asm["_emscripten_bind_b2FrictionJointDef_get_bodyA_0"];
-var _emscripten_bind_b2Body_ApplyForce_2 = Module["_emscripten_bind_b2Body_ApplyForce_2"] = asm["_emscripten_bind_b2Body_ApplyForce_2"];
 var _emscripten_bind_b2WheelJointDef_get_type_0 = Module["_emscripten_bind_b2WheelJointDef_get_type_0"] = asm["_emscripten_bind_b2WheelJointDef_get_type_0"];
 var _emscripten_bind_b2RevoluteJoint_GetReactionForce_1 = Module["_emscripten_bind_b2RevoluteJoint_GetReactionForce_1"] = asm["_emscripten_bind_b2RevoluteJoint_GetReactionForce_1"];
 var _emscripten_bind_b2PulleyJointDef_set_collideConnected_1 = Module["_emscripten_bind_b2PulleyJointDef_set_collideConnected_1"] = asm["_emscripten_bind_b2PulleyJointDef_set_collideConnected_1"];
@@ -3338,6 +3384,7 @@ var _emscripten_bind_b2WeldJointDef_get_localAnchorB_0 = Module["_emscripten_bin
 var _emscripten_bind_b2WeldJointDef_set_referenceAngle_1 = Module["_emscripten_bind_b2WeldJointDef_set_referenceAngle_1"] = asm["_emscripten_bind_b2WeldJointDef_set_referenceAngle_1"];
 var _emscripten_bind_b2DistanceJointDef_set_localAnchorB_1 = Module["_emscripten_bind_b2DistanceJointDef_set_localAnchorB_1"] = asm["_emscripten_bind_b2DistanceJointDef_set_localAnchorB_1"];
 var _emscripten_bind_b2Mat33_SetZero_0 = Module["_emscripten_bind_b2Mat33_SetZero_0"] = asm["_emscripten_bind_b2Mat33_SetZero_0"];
+var _emscripten_bind_b2MotorJointDef_get_bodyB_0 = Module["_emscripten_bind_b2MotorJointDef_get_bodyB_0"] = asm["_emscripten_bind_b2MotorJointDef_get_bodyB_0"];
 var _emscripten_bind_b2WheelJointDef_b2WheelJointDef_0 = Module["_emscripten_bind_b2WheelJointDef_b2WheelJointDef_0"] = asm["_emscripten_bind_b2WheelJointDef_b2WheelJointDef_0"];
 var _emscripten_bind_b2PrismaticJointDef_get_localAxisA_0 = Module["_emscripten_bind_b2PrismaticJointDef_get_localAxisA_0"] = asm["_emscripten_bind_b2PrismaticJointDef_get_localAxisA_0"];
 var _emscripten_bind_b2Mat22_get_ey_0 = Module["_emscripten_bind_b2Mat22_get_ey_0"] = asm["_emscripten_bind_b2Mat22_get_ey_0"];
@@ -3362,16 +3409,17 @@ var _emscripten_bind_b2BodyDef_get_linearVelocity_0 = Module["_emscripten_bind_b
 var _emscripten_bind_b2DistanceJointDef_get_bodyB_0 = Module["_emscripten_bind_b2DistanceJointDef_get_bodyB_0"] = asm["_emscripten_bind_b2DistanceJointDef_get_bodyB_0"];
 var _emscripten_bind_b2Mat22___destroy___0 = Module["_emscripten_bind_b2Mat22___destroy___0"] = asm["_emscripten_bind_b2Mat22___destroy___0"];
 var _emscripten_bind_b2RevoluteJoint_GetNext_0 = Module["_emscripten_bind_b2RevoluteJoint_GetNext_0"] = asm["_emscripten_bind_b2RevoluteJoint_GetNext_0"];
-var _emscripten_bind_JSDestructionListener_JSDestructionListener_0 = Module["_emscripten_bind_JSDestructionListener_JSDestructionListener_0"] = asm["_emscripten_bind_JSDestructionListener_JSDestructionListener_0"];
+var _emscripten_bind_b2WeldJointDef_get_bodyA_0 = Module["_emscripten_bind_b2WeldJointDef_get_bodyA_0"] = asm["_emscripten_bind_b2WeldJointDef_get_bodyA_0"];
+var _emscripten_bind_b2MotorJoint_GetAnchorB_0 = Module["_emscripten_bind_b2MotorJoint_GetAnchorB_0"] = asm["_emscripten_bind_b2MotorJoint_GetAnchorB_0"];
 var _emscripten_bind_b2Fixture_GetShape_0 = Module["_emscripten_bind_b2Fixture_GetShape_0"] = asm["_emscripten_bind_b2Fixture_GetShape_0"];
 var _emscripten_bind_b2PulleyJoint_GetReactionTorque_1 = Module["_emscripten_bind_b2PulleyJoint_GetReactionTorque_1"] = asm["_emscripten_bind_b2PulleyJoint_GetReactionTorque_1"];
 var _emscripten_bind_b2Vec3_op_mul_1 = Module["_emscripten_bind_b2Vec3_op_mul_1"] = asm["_emscripten_bind_b2Vec3_op_mul_1"];
 var _emscripten_bind_b2PolygonShape_set_m_type_1 = Module["_emscripten_bind_b2PolygonShape_set_m_type_1"] = asm["_emscripten_bind_b2PolygonShape_set_m_type_1"];
-var _emscripten_bind_b2PolygonShape_get_m_vertexCount_0 = Module["_emscripten_bind_b2PolygonShape_get_m_vertexCount_0"] = asm["_emscripten_bind_b2PolygonShape_get_m_vertexCount_0"];
 var _emscripten_bind_b2WheelJoint_GetType_0 = Module["_emscripten_bind_b2WheelJoint_GetType_0"] = asm["_emscripten_bind_b2WheelJoint_GetType_0"];
+var _emscripten_bind_b2MotorJoint_GetAngularOffset_0 = Module["_emscripten_bind_b2MotorJoint_GetAngularOffset_0"] = asm["_emscripten_bind_b2MotorJoint_GetAngularOffset_0"];
 var _emscripten_bind_b2RevoluteJoint_IsActive_0 = Module["_emscripten_bind_b2RevoluteJoint_IsActive_0"] = asm["_emscripten_bind_b2RevoluteJoint_IsActive_0"];
 var _emscripten_bind_b2GearJoint_GetNext_0 = Module["_emscripten_bind_b2GearJoint_GetNext_0"] = asm["_emscripten_bind_b2GearJoint_GetNext_0"];
-var _emscripten_bind_b2PolygonShape_set_m_vertexCount_1 = Module["_emscripten_bind_b2PolygonShape_set_m_vertexCount_1"] = asm["_emscripten_bind_b2PolygonShape_set_m_vertexCount_1"];
+var _emscripten_bind_b2MouseJointDef_get_maxForce_0 = Module["_emscripten_bind_b2MouseJointDef_get_maxForce_0"] = asm["_emscripten_bind_b2MouseJointDef_get_maxForce_0"];
 var _emscripten_bind_b2DestructionListenerWrapper___destroy___0 = Module["_emscripten_bind_b2DestructionListenerWrapper___destroy___0"] = asm["_emscripten_bind_b2DestructionListenerWrapper___destroy___0"];
 var _emscripten_bind_b2PrismaticJointDef_set_maxMotorForce_1 = Module["_emscripten_bind_b2PrismaticJointDef_set_maxMotorForce_1"] = asm["_emscripten_bind_b2PrismaticJointDef_set_maxMotorForce_1"];
 var _emscripten_bind_b2WheelJoint_GetLocalAxisA_0 = Module["_emscripten_bind_b2WheelJoint_GetLocalAxisA_0"] = asm["_emscripten_bind_b2WheelJoint_GetLocalAxisA_0"];
@@ -3385,6 +3433,7 @@ var _emscripten_bind_b2FrictionJoint_GetAnchorB_0 = Module["_emscripten_bind_b2F
 var _emscripten_bind_b2World_QueryAABB_2 = Module["_emscripten_bind_b2World_QueryAABB_2"] = asm["_emscripten_bind_b2World_QueryAABB_2"];
 var _emscripten_bind_b2Profile_set_collide_1 = Module["_emscripten_bind_b2Profile_set_collide_1"] = asm["_emscripten_bind_b2Profile_set_collide_1"];
 var _emscripten_bind_b2BodyDef_get_userData_0 = Module["_emscripten_bind_b2BodyDef_get_userData_0"] = asm["_emscripten_bind_b2BodyDef_get_userData_0"];
+var _emscripten_bind_b2MotorJoint_SetLinearOffset_1 = Module["_emscripten_bind_b2MotorJoint_SetLinearOffset_1"] = asm["_emscripten_bind_b2MotorJoint_SetLinearOffset_1"];
 var _emscripten_bind_b2FrictionJoint_GetMaxForce_0 = Module["_emscripten_bind_b2FrictionJoint_GetMaxForce_0"] = asm["_emscripten_bind_b2FrictionJoint_GetMaxForce_0"];
 var _emscripten_bind_b2WheelJointDef_get_userData_0 = Module["_emscripten_bind_b2WheelJointDef_get_userData_0"] = asm["_emscripten_bind_b2WheelJointDef_get_userData_0"];
 var _emscripten_bind_b2RevoluteJoint_IsLimitEnabled_0 = Module["_emscripten_bind_b2RevoluteJoint_IsLimitEnabled_0"] = asm["_emscripten_bind_b2RevoluteJoint_IsLimitEnabled_0"];
@@ -3393,6 +3442,7 @@ var _emscripten_bind_b2RevoluteJointDef_set_maxMotorTorque_1 = Module["_emscript
 var _emscripten_bind_b2WeldJointDef_set_bodyB_1 = Module["_emscripten_bind_b2WeldJointDef_set_bodyB_1"] = asm["_emscripten_bind_b2WeldJointDef_set_bodyB_1"];
 var _emscripten_bind_b2Transform_set_p_1 = Module["_emscripten_bind_b2Transform_set_p_1"] = asm["_emscripten_bind_b2Transform_set_p_1"];
 var _emscripten_bind_b2DistanceJoint_SetLength_1 = Module["_emscripten_bind_b2DistanceJoint_SetLength_1"] = asm["_emscripten_bind_b2DistanceJoint_SetLength_1"];
+var _emscripten_bind_b2ManifoldPoint_get_localPoint_0 = Module["_emscripten_bind_b2ManifoldPoint_get_localPoint_0"] = asm["_emscripten_bind_b2ManifoldPoint_get_localPoint_0"];
 var _emscripten_bind_b2JointEdge_get_joint_0 = Module["_emscripten_bind_b2JointEdge_get_joint_0"] = asm["_emscripten_bind_b2JointEdge_get_joint_0"];
 var _emscripten_bind_b2Body_GetLocalCenter_0 = Module["_emscripten_bind_b2Body_GetLocalCenter_0"] = asm["_emscripten_bind_b2Body_GetLocalCenter_0"];
 var _emscripten_bind_b2FixtureDef___destroy___0 = Module["_emscripten_bind_b2FixtureDef___destroy___0"] = asm["_emscripten_bind_b2FixtureDef___destroy___0"];
@@ -3402,19 +3452,20 @@ var _emscripten_bind_b2Profile_get_solveVelocity_0 = Module["_emscripten_bind_b2
 var _emscripten_bind_b2WeldJointDef_get_bodyB_0 = Module["_emscripten_bind_b2WeldJointDef_get_bodyB_0"] = asm["_emscripten_bind_b2WeldJointDef_get_bodyB_0"];
 var _emscripten_bind_b2World_GetContinuousPhysics_0 = Module["_emscripten_bind_b2World_GetContinuousPhysics_0"] = asm["_emscripten_bind_b2World_GetContinuousPhysics_0"];
 var _emscripten_bind_b2Joint_GetBodyA_0 = Module["_emscripten_bind_b2Joint_GetBodyA_0"] = asm["_emscripten_bind_b2Joint_GetBodyA_0"];
-var _emscripten_bind_b2Body_SetAngularDamping_1 = Module["_emscripten_bind_b2Body_SetAngularDamping_1"] = asm["_emscripten_bind_b2Body_SetAngularDamping_1"];
+var _emscripten_bind_b2MotorJointDef_set_maxTorque_1 = Module["_emscripten_bind_b2MotorJointDef_set_maxTorque_1"] = asm["_emscripten_bind_b2MotorJointDef_set_maxTorque_1"];
 var _emscripten_bind_b2PulleyJointDef_Initialize_7 = Module["_emscripten_bind_b2PulleyJointDef_Initialize_7"] = asm["_emscripten_bind_b2PulleyJointDef_Initialize_7"];
 var _emscripten_bind_b2GearJointDef_set_bodyB_1 = Module["_emscripten_bind_b2GearJointDef_set_bodyB_1"] = asm["_emscripten_bind_b2GearJointDef_set_bodyB_1"];
 var _emscripten_bind_b2RopeJoint_GetReactionTorque_1 = Module["_emscripten_bind_b2RopeJoint_GetReactionTorque_1"] = asm["_emscripten_bind_b2RopeJoint_GetReactionTorque_1"];
 var _emscripten_bind_b2WheelJointDef_set_dampingRatio_1 = Module["_emscripten_bind_b2WheelJointDef_set_dampingRatio_1"] = asm["_emscripten_bind_b2WheelJointDef_set_dampingRatio_1"];
 var _emscripten_bind_b2GearJoint_GetType_0 = Module["_emscripten_bind_b2GearJoint_GetType_0"] = asm["_emscripten_bind_b2GearJoint_GetType_0"];
+var _emscripten_bind_b2MotorJoint_GetNext_0 = Module["_emscripten_bind_b2MotorJoint_GetNext_0"] = asm["_emscripten_bind_b2MotorJoint_GetNext_0"];
 var _emscripten_bind_b2EdgeShape_set_m_vertex0_1 = Module["_emscripten_bind_b2EdgeShape_set_m_vertex0_1"] = asm["_emscripten_bind_b2EdgeShape_set_m_vertex0_1"];
 var _emscripten_bind_b2RevoluteJoint_GetAnchorB_0 = Module["_emscripten_bind_b2RevoluteJoint_GetAnchorB_0"] = asm["_emscripten_bind_b2RevoluteJoint_GetAnchorB_0"];
 var _emscripten_bind_b2RopeJointDef_set_localAnchorB_1 = Module["_emscripten_bind_b2RopeJointDef_set_localAnchorB_1"] = asm["_emscripten_bind_b2RopeJointDef_set_localAnchorB_1"];
 var _emscripten_bind_b2PrismaticJoint_GetUserData_0 = Module["_emscripten_bind_b2PrismaticJoint_GetUserData_0"] = asm["_emscripten_bind_b2PrismaticJoint_GetUserData_0"];
 var _emscripten_bind_b2GearJointDef_set_userData_1 = Module["_emscripten_bind_b2GearJointDef_set_userData_1"] = asm["_emscripten_bind_b2GearJointDef_set_userData_1"];
 var _emscripten_bind_b2Fixture_SetSensor_1 = Module["_emscripten_bind_b2Fixture_SetSensor_1"] = asm["_emscripten_bind_b2Fixture_SetSensor_1"];
-var _emscripten_bind_b2EdgeShape_get_m_radius_0 = Module["_emscripten_bind_b2EdgeShape_get_m_radius_0"] = asm["_emscripten_bind_b2EdgeShape_get_m_radius_0"];
+var _emscripten_bind_b2MotorJointDef_set_collideConnected_1 = Module["_emscripten_bind_b2MotorJointDef_set_collideConnected_1"] = asm["_emscripten_bind_b2MotorJointDef_set_collideConnected_1"];
 var _emscripten_bind_b2Contact_GetFixtureB_0 = Module["_emscripten_bind_b2Contact_GetFixtureB_0"] = asm["_emscripten_bind_b2Contact_GetFixtureB_0"];
 var _emscripten_bind_b2ChainShape_ComputeMass_2 = Module["_emscripten_bind_b2ChainShape_ComputeMass_2"] = asm["_emscripten_bind_b2ChainShape_ComputeMass_2"];
 var _emscripten_bind_b2WeldJointDef_b2WeldJointDef_0 = Module["_emscripten_bind_b2WeldJointDef_b2WeldJointDef_0"] = asm["_emscripten_bind_b2WeldJointDef_b2WeldJointDef_0"];
@@ -3429,6 +3480,7 @@ var _emscripten_bind_b2WheelJointDef_set_localAxisA_1 = Module["_emscripten_bind
 var _emscripten_bind_b2Joint_Dump_0 = Module["_emscripten_bind_b2Joint_Dump_0"] = asm["_emscripten_bind_b2Joint_Dump_0"];
 var _emscripten_bind_b2Color_get_r_0 = Module["_emscripten_bind_b2Color_get_r_0"] = asm["_emscripten_bind_b2Color_get_r_0"];
 var _emscripten_bind_b2RevoluteJointDef_set_motorSpeed_1 = Module["_emscripten_bind_b2RevoluteJointDef_set_motorSpeed_1"] = asm["_emscripten_bind_b2RevoluteJointDef_set_motorSpeed_1"];
+var _emscripten_bind_b2MotorJointDef_get_bodyA_0 = Module["_emscripten_bind_b2MotorJointDef_get_bodyA_0"] = asm["_emscripten_bind_b2MotorJointDef_get_bodyA_0"];
 var _emscripten_bind_b2WheelJointDef_get_enableMotor_0 = Module["_emscripten_bind_b2WheelJointDef_get_enableMotor_0"] = asm["_emscripten_bind_b2WheelJointDef_get_enableMotor_0"];
 var _emscripten_bind_b2Vec2_LengthSquared_0 = Module["_emscripten_bind_b2Vec2_LengthSquared_0"] = asm["_emscripten_bind_b2Vec2_LengthSquared_0"];
 var _emscripten_bind_b2FrictionJointDef_set_bodyA_1 = Module["_emscripten_bind_b2FrictionJointDef_set_bodyA_1"] = asm["_emscripten_bind_b2FrictionJointDef_set_bodyA_1"];
@@ -4804,6 +4856,136 @@ b2Rot.prototype['GetYAxis'] = b2Rot.prototype.GetYAxis = function() {
   var self = this.ptr;
   _emscripten_bind_b2Rot___destroy___0(self);
 };
+// b2MotorJoint
+function b2MotorJoint() { throw "cannot construct a b2MotorJoint, no constructor in IDL" }
+b2MotorJoint.prototype = Object.create(b2Joint.prototype);
+b2MotorJoint.prototype.constructor = b2MotorJoint;
+b2MotorJoint.prototype.__class__ = b2MotorJoint;
+b2MotorJoint.__cache__ = {};
+Module['b2MotorJoint'] = b2MotorJoint;
+
+b2MotorJoint.prototype['SetLinearOffset'] = b2MotorJoint.prototype.SetLinearOffset = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJoint_SetLinearOffset_1(self, arg0);
+};;
+
+b2MotorJoint.prototype['GetLinearOffset'] = b2MotorJoint.prototype.GetLinearOffset = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJoint_GetLinearOffset_0(self), b2Vec2);
+};;
+
+b2MotorJoint.prototype['SetAngularOffset'] = b2MotorJoint.prototype.SetAngularOffset = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJoint_SetAngularOffset_1(self, arg0);
+};;
+
+b2MotorJoint.prototype['GetAngularOffset'] = b2MotorJoint.prototype.GetAngularOffset = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJoint_GetAngularOffset_0(self);
+};;
+
+b2MotorJoint.prototype['SetMaxForce'] = b2MotorJoint.prototype.SetMaxForce = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJoint_SetMaxForce_1(self, arg0);
+};;
+
+b2MotorJoint.prototype['GetMaxForce'] = b2MotorJoint.prototype.GetMaxForce = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJoint_GetMaxForce_0(self);
+};;
+
+b2MotorJoint.prototype['SetMaxTorque'] = b2MotorJoint.prototype.SetMaxTorque = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJoint_SetMaxTorque_1(self, arg0);
+};;
+
+b2MotorJoint.prototype['GetMaxTorque'] = b2MotorJoint.prototype.GetMaxTorque = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJoint_GetMaxTorque_0(self);
+};;
+
+b2MotorJoint.prototype['SetCorrectionFactor'] = b2MotorJoint.prototype.SetCorrectionFactor = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJoint_SetCorrectionFactor_1(self, arg0);
+};;
+
+b2MotorJoint.prototype['GetCorrectionFactor'] = b2MotorJoint.prototype.GetCorrectionFactor = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJoint_GetCorrectionFactor_0(self);
+};;
+
+b2MotorJoint.prototype['GetType'] = b2MotorJoint.prototype.GetType = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJoint_GetType_0(self);
+};;
+
+b2MotorJoint.prototype['GetBodyA'] = b2MotorJoint.prototype.GetBodyA = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJoint_GetBodyA_0(self), b2Body);
+};;
+
+b2MotorJoint.prototype['GetBodyB'] = b2MotorJoint.prototype.GetBodyB = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJoint_GetBodyB_0(self), b2Body);
+};;
+
+b2MotorJoint.prototype['GetAnchorA'] = b2MotorJoint.prototype.GetAnchorA = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJoint_GetAnchorA_0(self), b2Vec2);
+};;
+
+b2MotorJoint.prototype['GetAnchorB'] = b2MotorJoint.prototype.GetAnchorB = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJoint_GetAnchorB_0(self), b2Vec2);
+};;
+
+b2MotorJoint.prototype['GetReactionForce'] = b2MotorJoint.prototype.GetReactionForce = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJoint_GetReactionForce_1(self, arg0), b2Vec2);
+};;
+
+b2MotorJoint.prototype['GetReactionTorque'] = b2MotorJoint.prototype.GetReactionTorque = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  return _emscripten_bind_b2MotorJoint_GetReactionTorque_1(self, arg0);
+};;
+
+b2MotorJoint.prototype['GetNext'] = b2MotorJoint.prototype.GetNext = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJoint_GetNext_0(self), b2Joint);
+};;
+
+b2MotorJoint.prototype['GetUserData'] = b2MotorJoint.prototype.GetUserData = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJoint_GetUserData_0(self);
+};;
+
+b2MotorJoint.prototype['SetUserData'] = b2MotorJoint.prototype.SetUserData = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJoint_SetUserData_1(self, arg0);
+};;
+
+b2MotorJoint.prototype['IsActive'] = b2MotorJoint.prototype.IsActive = function() {
+  var self = this.ptr;
+  return !!(_emscripten_bind_b2MotorJoint_IsActive_0(self));
+};;
+
+b2MotorJoint.prototype['GetCollideConnected'] = b2MotorJoint.prototype.GetCollideConnected = function() {
+  var self = this.ptr;
+  return !!(_emscripten_bind_b2MotorJoint_GetCollideConnected_0(self));
+};;
+
+  b2MotorJoint.prototype['__destroy__'] = b2MotorJoint.prototype.__destroy__ = function() {
+  var self = this.ptr;
+  _emscripten_bind_b2MotorJoint___destroy___0(self);
+};
 // b2Profile
 function b2Profile() { throw "cannot construct a b2Profile, no constructor in IDL" }
 b2Profile.prototype = Object.create(WrapperObject.prototype);
@@ -7204,6 +7386,11 @@ b2ChainShape.prototype.__class__ = b2ChainShape;
 b2ChainShape.__cache__ = {};
 Module['b2ChainShape'] = b2ChainShape;
 
+b2ChainShape.prototype['Clear'] = b2ChainShape.prototype.Clear = function() {
+  var self = this.ptr;
+  _emscripten_bind_b2ChainShape_Clear_0(self);
+};;
+
 b2ChainShape.prototype['CreateLoop'] = b2ChainShape.prototype.CreateLoop = function(arg0, arg1) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
@@ -7640,14 +7827,14 @@ b2PolygonShape.prototype['ComputeMass'] = b2PolygonShape.prototype.ComputeMass =
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   _emscripten_bind_b2PolygonShape_set_m_centroid_1(self, arg0);
 };
-  b2PolygonShape.prototype['get_m_vertexCount'] = b2PolygonShape.prototype.get_m_vertexCount = function() {
+  b2PolygonShape.prototype['get_m_count'] = b2PolygonShape.prototype.get_m_count = function() {
   var self = this.ptr;
-  return _emscripten_bind_b2PolygonShape_get_m_vertexCount_0(self);
+  return _emscripten_bind_b2PolygonShape_get_m_count_0(self);
 };
-    b2PolygonShape.prototype['set_m_vertexCount'] = b2PolygonShape.prototype.set_m_vertexCount = function(arg0) {
+    b2PolygonShape.prototype['set_m_count'] = b2PolygonShape.prototype.set_m_count = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  _emscripten_bind_b2PolygonShape_set_m_vertexCount_1(self, arg0);
+  _emscripten_bind_b2PolygonShape_set_m_count_1(self, arg0);
 };
   b2PolygonShape.prototype['get_m_type'] = b2PolygonShape.prototype.get_m_type = function() {
   var self = this.ptr;
@@ -8233,6 +8420,16 @@ b2PulleyJoint.prototype['GetRatio'] = b2PulleyJoint.prototype.GetRatio = functio
   return _emscripten_bind_b2PulleyJoint_GetRatio_0(self);
 };;
 
+b2PulleyJoint.prototype['GetCurrentLengthA'] = b2PulleyJoint.prototype.GetCurrentLengthA = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2PulleyJoint_GetCurrentLengthA_0(self);
+};;
+
+b2PulleyJoint.prototype['GetCurrentLengthB'] = b2PulleyJoint.prototype.GetCurrentLengthB = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2PulleyJoint_GetCurrentLengthB_0(self);
+};;
+
 b2PulleyJoint.prototype['GetType'] = b2PulleyJoint.prototype.GetType = function() {
   var self = this.ptr;
   return _emscripten_bind_b2PulleyJoint_GetType_0(self);
@@ -8482,6 +8679,17 @@ b2Contact.prototype['ResetRestitution'] = b2Contact.prototype.ResetRestitution =
   _emscripten_bind_b2Contact_ResetRestitution_0(self);
 };;
 
+b2Contact.prototype['SetTangentSpeed'] = b2Contact.prototype.SetTangentSpeed = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2Contact_SetTangentSpeed_1(self, arg0);
+};;
+
+b2Contact.prototype['GetTangentSpeed'] = b2Contact.prototype.GetTangentSpeed = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2Contact_GetTangentSpeed_0(self);
+};;
+
 // b2DistanceJointDef
 function b2DistanceJointDef() {
   this.ptr = _emscripten_bind_b2DistanceJointDef_b2DistanceJointDef_0();
@@ -8672,36 +8880,41 @@ b2Body.prototype['GetAngularVelocity'] = b2Body.prototype.GetAngularVelocity = f
   return _emscripten_bind_b2Body_GetAngularVelocity_0(self);
 };;
 
-b2Body.prototype['ApplyForce'] = b2Body.prototype.ApplyForce = function(arg0, arg1) {
+b2Body.prototype['ApplyForce'] = b2Body.prototype.ApplyForce = function(arg0, arg1, arg2) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
-  _emscripten_bind_b2Body_ApplyForce_2(self, arg0, arg1);
+  if (arg2 && typeof arg2 === 'object') arg2 = arg2.ptr;
+  _emscripten_bind_b2Body_ApplyForce_3(self, arg0, arg1, arg2);
 };;
 
-b2Body.prototype['ApplyForceToCenter'] = b2Body.prototype.ApplyForceToCenter = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  _emscripten_bind_b2Body_ApplyForceToCenter_1(self, arg0);
-};;
-
-b2Body.prototype['ApplyTorque'] = b2Body.prototype.ApplyTorque = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  _emscripten_bind_b2Body_ApplyTorque_1(self, arg0);
-};;
-
-b2Body.prototype['ApplyLinearImpulse'] = b2Body.prototype.ApplyLinearImpulse = function(arg0, arg1) {
+b2Body.prototype['ApplyForceToCenter'] = b2Body.prototype.ApplyForceToCenter = function(arg0, arg1) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
-  _emscripten_bind_b2Body_ApplyLinearImpulse_2(self, arg0, arg1);
+  _emscripten_bind_b2Body_ApplyForceToCenter_2(self, arg0, arg1);
 };;
 
-b2Body.prototype['ApplyAngularImpulse'] = b2Body.prototype.ApplyAngularImpulse = function(arg0) {
+b2Body.prototype['ApplyTorque'] = b2Body.prototype.ApplyTorque = function(arg0, arg1) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  _emscripten_bind_b2Body_ApplyAngularImpulse_1(self, arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  _emscripten_bind_b2Body_ApplyTorque_2(self, arg0, arg1);
+};;
+
+b2Body.prototype['ApplyLinearImpulse'] = b2Body.prototype.ApplyLinearImpulse = function(arg0, arg1, arg2) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  if (arg2 && typeof arg2 === 'object') arg2 = arg2.ptr;
+  _emscripten_bind_b2Body_ApplyLinearImpulse_3(self, arg0, arg1, arg2);
+};;
+
+b2Body.prototype['ApplyAngularImpulse'] = b2Body.prototype.ApplyAngularImpulse = function(arg0, arg1) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  _emscripten_bind_b2Body_ApplyAngularImpulse_2(self, arg0, arg1);
 };;
 
 b2Body.prototype['GetMass'] = b2Body.prototype.GetMass = function() {
@@ -9418,6 +9631,118 @@ Module['b2RopeJointDef'] = b2RopeJointDef;
   var self = this.ptr;
   _emscripten_bind_b2RopeJointDef___destroy___0(self);
 };
+// b2MotorJointDef
+function b2MotorJointDef() {
+  this.ptr = _emscripten_bind_b2MotorJointDef_b2MotorJointDef_0();
+  getCache(b2MotorJointDef)[this.ptr] = this;
+};;
+b2MotorJointDef.prototype = Object.create(b2JointDef.prototype);
+b2MotorJointDef.prototype.constructor = b2MotorJointDef;
+b2MotorJointDef.prototype.__class__ = b2MotorJointDef;
+b2MotorJointDef.__cache__ = {};
+Module['b2MotorJointDef'] = b2MotorJointDef;
+
+b2MotorJointDef.prototype['Initialize'] = b2MotorJointDef.prototype.Initialize = function(arg0, arg1) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  _emscripten_bind_b2MotorJointDef_Initialize_2(self, arg0, arg1);
+};;
+
+  b2MotorJointDef.prototype['get_linearOffset'] = b2MotorJointDef.prototype.get_linearOffset = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJointDef_get_linearOffset_0(self), b2Vec2);
+};
+    b2MotorJointDef.prototype['set_linearOffset'] = b2MotorJointDef.prototype.set_linearOffset = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_linearOffset_1(self, arg0);
+};
+  b2MotorJointDef.prototype['get_angularOffset'] = b2MotorJointDef.prototype.get_angularOffset = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJointDef_get_angularOffset_0(self);
+};
+    b2MotorJointDef.prototype['set_angularOffset'] = b2MotorJointDef.prototype.set_angularOffset = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_angularOffset_1(self, arg0);
+};
+  b2MotorJointDef.prototype['get_maxForce'] = b2MotorJointDef.prototype.get_maxForce = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJointDef_get_maxForce_0(self);
+};
+    b2MotorJointDef.prototype['set_maxForce'] = b2MotorJointDef.prototype.set_maxForce = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_maxForce_1(self, arg0);
+};
+  b2MotorJointDef.prototype['get_maxTorque'] = b2MotorJointDef.prototype.get_maxTorque = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJointDef_get_maxTorque_0(self);
+};
+    b2MotorJointDef.prototype['set_maxTorque'] = b2MotorJointDef.prototype.set_maxTorque = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_maxTorque_1(self, arg0);
+};
+  b2MotorJointDef.prototype['get_correctionFactor'] = b2MotorJointDef.prototype.get_correctionFactor = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJointDef_get_correctionFactor_0(self);
+};
+    b2MotorJointDef.prototype['set_correctionFactor'] = b2MotorJointDef.prototype.set_correctionFactor = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_correctionFactor_1(self, arg0);
+};
+  b2MotorJointDef.prototype['get_type'] = b2MotorJointDef.prototype.get_type = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJointDef_get_type_0(self);
+};
+    b2MotorJointDef.prototype['set_type'] = b2MotorJointDef.prototype.set_type = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_type_1(self, arg0);
+};
+  b2MotorJointDef.prototype['get_userData'] = b2MotorJointDef.prototype.get_userData = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJointDef_get_userData_0(self);
+};
+    b2MotorJointDef.prototype['set_userData'] = b2MotorJointDef.prototype.set_userData = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_userData_1(self, arg0);
+};
+  b2MotorJointDef.prototype['get_bodyA'] = b2MotorJointDef.prototype.get_bodyA = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJointDef_get_bodyA_0(self), b2Body);
+};
+    b2MotorJointDef.prototype['set_bodyA'] = b2MotorJointDef.prototype.set_bodyA = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_bodyA_1(self, arg0);
+};
+  b2MotorJointDef.prototype['get_bodyB'] = b2MotorJointDef.prototype.get_bodyB = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJointDef_get_bodyB_0(self), b2Body);
+};
+    b2MotorJointDef.prototype['set_bodyB'] = b2MotorJointDef.prototype.set_bodyB = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_bodyB_1(self, arg0);
+};
+  b2MotorJointDef.prototype['get_collideConnected'] = b2MotorJointDef.prototype.get_collideConnected = function() {
+  var self = this.ptr;
+  return !!(_emscripten_bind_b2MotorJointDef_get_collideConnected_0(self));
+};
+    b2MotorJointDef.prototype['set_collideConnected'] = b2MotorJointDef.prototype.set_collideConnected = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_collideConnected_1(self, arg0);
+};
+  b2MotorJointDef.prototype['__destroy__'] = b2MotorJointDef.prototype.__destroy__ = function() {
+  var self = this.ptr;
+  _emscripten_bind_b2MotorJointDef___destroy___0(self);
+};
 (function() {
   function setupEnums() {
     
@@ -9459,6 +9784,8 @@ Module['b2RopeJointDef'] = b2RopeJointDef;
     Module['e_frictionJoint'] = _emscripten_enum_b2JointType_e_frictionJoint();
 
     Module['e_ropeJoint'] = _emscripten_enum_b2JointType_e_ropeJoint();
+
+    Module['e_motorJoint'] = _emscripten_enum_b2JointType_e_motorJoint();
 
     
 
@@ -10584,6 +10911,136 @@ b2Rot.prototype['GetYAxis'] = b2Rot.prototype.GetYAxis = function() {
   var self = this.ptr;
   _emscripten_bind_b2Rot___destroy___0(self);
 };
+// b2MotorJoint
+function b2MotorJoint() { throw "cannot construct a b2MotorJoint, no constructor in IDL" }
+b2MotorJoint.prototype = Object.create(b2Joint.prototype);
+b2MotorJoint.prototype.constructor = b2MotorJoint;
+b2MotorJoint.prototype.__class__ = b2MotorJoint;
+b2MotorJoint.__cache__ = {};
+Module['b2MotorJoint'] = b2MotorJoint;
+
+b2MotorJoint.prototype['SetLinearOffset'] = b2MotorJoint.prototype.SetLinearOffset = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJoint_SetLinearOffset_1(self, arg0);
+};;
+
+b2MotorJoint.prototype['GetLinearOffset'] = b2MotorJoint.prototype.GetLinearOffset = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJoint_GetLinearOffset_0(self), b2Vec2);
+};;
+
+b2MotorJoint.prototype['SetAngularOffset'] = b2MotorJoint.prototype.SetAngularOffset = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJoint_SetAngularOffset_1(self, arg0);
+};;
+
+b2MotorJoint.prototype['GetAngularOffset'] = b2MotorJoint.prototype.GetAngularOffset = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJoint_GetAngularOffset_0(self);
+};;
+
+b2MotorJoint.prototype['SetMaxForce'] = b2MotorJoint.prototype.SetMaxForce = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJoint_SetMaxForce_1(self, arg0);
+};;
+
+b2MotorJoint.prototype['GetMaxForce'] = b2MotorJoint.prototype.GetMaxForce = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJoint_GetMaxForce_0(self);
+};;
+
+b2MotorJoint.prototype['SetMaxTorque'] = b2MotorJoint.prototype.SetMaxTorque = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJoint_SetMaxTorque_1(self, arg0);
+};;
+
+b2MotorJoint.prototype['GetMaxTorque'] = b2MotorJoint.prototype.GetMaxTorque = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJoint_GetMaxTorque_0(self);
+};;
+
+b2MotorJoint.prototype['SetCorrectionFactor'] = b2MotorJoint.prototype.SetCorrectionFactor = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJoint_SetCorrectionFactor_1(self, arg0);
+};;
+
+b2MotorJoint.prototype['GetCorrectionFactor'] = b2MotorJoint.prototype.GetCorrectionFactor = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJoint_GetCorrectionFactor_0(self);
+};;
+
+b2MotorJoint.prototype['GetType'] = b2MotorJoint.prototype.GetType = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJoint_GetType_0(self);
+};;
+
+b2MotorJoint.prototype['GetBodyA'] = b2MotorJoint.prototype.GetBodyA = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJoint_GetBodyA_0(self), b2Body);
+};;
+
+b2MotorJoint.prototype['GetBodyB'] = b2MotorJoint.prototype.GetBodyB = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJoint_GetBodyB_0(self), b2Body);
+};;
+
+b2MotorJoint.prototype['GetAnchorA'] = b2MotorJoint.prototype.GetAnchorA = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJoint_GetAnchorA_0(self), b2Vec2);
+};;
+
+b2MotorJoint.prototype['GetAnchorB'] = b2MotorJoint.prototype.GetAnchorB = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJoint_GetAnchorB_0(self), b2Vec2);
+};;
+
+b2MotorJoint.prototype['GetReactionForce'] = b2MotorJoint.prototype.GetReactionForce = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJoint_GetReactionForce_1(self, arg0), b2Vec2);
+};;
+
+b2MotorJoint.prototype['GetReactionTorque'] = b2MotorJoint.prototype.GetReactionTorque = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  return _emscripten_bind_b2MotorJoint_GetReactionTorque_1(self, arg0);
+};;
+
+b2MotorJoint.prototype['GetNext'] = b2MotorJoint.prototype.GetNext = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJoint_GetNext_0(self), b2Joint);
+};;
+
+b2MotorJoint.prototype['GetUserData'] = b2MotorJoint.prototype.GetUserData = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJoint_GetUserData_0(self);
+};;
+
+b2MotorJoint.prototype['SetUserData'] = b2MotorJoint.prototype.SetUserData = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJoint_SetUserData_1(self, arg0);
+};;
+
+b2MotorJoint.prototype['IsActive'] = b2MotorJoint.prototype.IsActive = function() {
+  var self = this.ptr;
+  return !!(_emscripten_bind_b2MotorJoint_IsActive_0(self));
+};;
+
+b2MotorJoint.prototype['GetCollideConnected'] = b2MotorJoint.prototype.GetCollideConnected = function() {
+  var self = this.ptr;
+  return !!(_emscripten_bind_b2MotorJoint_GetCollideConnected_0(self));
+};;
+
+  b2MotorJoint.prototype['__destroy__'] = b2MotorJoint.prototype.__destroy__ = function() {
+  var self = this.ptr;
+  _emscripten_bind_b2MotorJoint___destroy___0(self);
+};
 // b2Profile
 function b2Profile() { throw "cannot construct a b2Profile, no constructor in IDL" }
 b2Profile.prototype = Object.create(WrapperObject.prototype);
@@ -12984,6 +13441,11 @@ b2ChainShape.prototype.__class__ = b2ChainShape;
 b2ChainShape.__cache__ = {};
 Module['b2ChainShape'] = b2ChainShape;
 
+b2ChainShape.prototype['Clear'] = b2ChainShape.prototype.Clear = function() {
+  var self = this.ptr;
+  _emscripten_bind_b2ChainShape_Clear_0(self);
+};;
+
 b2ChainShape.prototype['CreateLoop'] = b2ChainShape.prototype.CreateLoop = function(arg0, arg1) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
@@ -13420,14 +13882,14 @@ b2PolygonShape.prototype['ComputeMass'] = b2PolygonShape.prototype.ComputeMass =
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   _emscripten_bind_b2PolygonShape_set_m_centroid_1(self, arg0);
 };
-  b2PolygonShape.prototype['get_m_vertexCount'] = b2PolygonShape.prototype.get_m_vertexCount = function() {
+  b2PolygonShape.prototype['get_m_count'] = b2PolygonShape.prototype.get_m_count = function() {
   var self = this.ptr;
-  return _emscripten_bind_b2PolygonShape_get_m_vertexCount_0(self);
+  return _emscripten_bind_b2PolygonShape_get_m_count_0(self);
 };
-    b2PolygonShape.prototype['set_m_vertexCount'] = b2PolygonShape.prototype.set_m_vertexCount = function(arg0) {
+    b2PolygonShape.prototype['set_m_count'] = b2PolygonShape.prototype.set_m_count = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  _emscripten_bind_b2PolygonShape_set_m_vertexCount_1(self, arg0);
+  _emscripten_bind_b2PolygonShape_set_m_count_1(self, arg0);
 };
   b2PolygonShape.prototype['get_m_type'] = b2PolygonShape.prototype.get_m_type = function() {
   var self = this.ptr;
@@ -14013,6 +14475,16 @@ b2PulleyJoint.prototype['GetRatio'] = b2PulleyJoint.prototype.GetRatio = functio
   return _emscripten_bind_b2PulleyJoint_GetRatio_0(self);
 };;
 
+b2PulleyJoint.prototype['GetCurrentLengthA'] = b2PulleyJoint.prototype.GetCurrentLengthA = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2PulleyJoint_GetCurrentLengthA_0(self);
+};;
+
+b2PulleyJoint.prototype['GetCurrentLengthB'] = b2PulleyJoint.prototype.GetCurrentLengthB = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2PulleyJoint_GetCurrentLengthB_0(self);
+};;
+
 b2PulleyJoint.prototype['GetType'] = b2PulleyJoint.prototype.GetType = function() {
   var self = this.ptr;
   return _emscripten_bind_b2PulleyJoint_GetType_0(self);
@@ -14262,6 +14734,17 @@ b2Contact.prototype['ResetRestitution'] = b2Contact.prototype.ResetRestitution =
   _emscripten_bind_b2Contact_ResetRestitution_0(self);
 };;
 
+b2Contact.prototype['SetTangentSpeed'] = b2Contact.prototype.SetTangentSpeed = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2Contact_SetTangentSpeed_1(self, arg0);
+};;
+
+b2Contact.prototype['GetTangentSpeed'] = b2Contact.prototype.GetTangentSpeed = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2Contact_GetTangentSpeed_0(self);
+};;
+
 // b2DistanceJointDef
 function b2DistanceJointDef() {
   this.ptr = _emscripten_bind_b2DistanceJointDef_b2DistanceJointDef_0();
@@ -14452,36 +14935,41 @@ b2Body.prototype['GetAngularVelocity'] = b2Body.prototype.GetAngularVelocity = f
   return _emscripten_bind_b2Body_GetAngularVelocity_0(self);
 };;
 
-b2Body.prototype['ApplyForce'] = b2Body.prototype.ApplyForce = function(arg0, arg1) {
+b2Body.prototype['ApplyForce'] = b2Body.prototype.ApplyForce = function(arg0, arg1, arg2) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
-  _emscripten_bind_b2Body_ApplyForce_2(self, arg0, arg1);
+  if (arg2 && typeof arg2 === 'object') arg2 = arg2.ptr;
+  _emscripten_bind_b2Body_ApplyForce_3(self, arg0, arg1, arg2);
 };;
 
-b2Body.prototype['ApplyForceToCenter'] = b2Body.prototype.ApplyForceToCenter = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  _emscripten_bind_b2Body_ApplyForceToCenter_1(self, arg0);
-};;
-
-b2Body.prototype['ApplyTorque'] = b2Body.prototype.ApplyTorque = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  _emscripten_bind_b2Body_ApplyTorque_1(self, arg0);
-};;
-
-b2Body.prototype['ApplyLinearImpulse'] = b2Body.prototype.ApplyLinearImpulse = function(arg0, arg1) {
+b2Body.prototype['ApplyForceToCenter'] = b2Body.prototype.ApplyForceToCenter = function(arg0, arg1) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
-  _emscripten_bind_b2Body_ApplyLinearImpulse_2(self, arg0, arg1);
+  _emscripten_bind_b2Body_ApplyForceToCenter_2(self, arg0, arg1);
 };;
 
-b2Body.prototype['ApplyAngularImpulse'] = b2Body.prototype.ApplyAngularImpulse = function(arg0) {
+b2Body.prototype['ApplyTorque'] = b2Body.prototype.ApplyTorque = function(arg0, arg1) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  _emscripten_bind_b2Body_ApplyAngularImpulse_1(self, arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  _emscripten_bind_b2Body_ApplyTorque_2(self, arg0, arg1);
+};;
+
+b2Body.prototype['ApplyLinearImpulse'] = b2Body.prototype.ApplyLinearImpulse = function(arg0, arg1, arg2) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  if (arg2 && typeof arg2 === 'object') arg2 = arg2.ptr;
+  _emscripten_bind_b2Body_ApplyLinearImpulse_3(self, arg0, arg1, arg2);
+};;
+
+b2Body.prototype['ApplyAngularImpulse'] = b2Body.prototype.ApplyAngularImpulse = function(arg0, arg1) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  _emscripten_bind_b2Body_ApplyAngularImpulse_2(self, arg0, arg1);
 };;
 
 b2Body.prototype['GetMass'] = b2Body.prototype.GetMass = function() {
@@ -15198,6 +15686,118 @@ Module['b2RopeJointDef'] = b2RopeJointDef;
   var self = this.ptr;
   _emscripten_bind_b2RopeJointDef___destroy___0(self);
 };
+// b2MotorJointDef
+function b2MotorJointDef() {
+  this.ptr = _emscripten_bind_b2MotorJointDef_b2MotorJointDef_0();
+  getCache(b2MotorJointDef)[this.ptr] = this;
+};;
+b2MotorJointDef.prototype = Object.create(b2JointDef.prototype);
+b2MotorJointDef.prototype.constructor = b2MotorJointDef;
+b2MotorJointDef.prototype.__class__ = b2MotorJointDef;
+b2MotorJointDef.__cache__ = {};
+Module['b2MotorJointDef'] = b2MotorJointDef;
+
+b2MotorJointDef.prototype['Initialize'] = b2MotorJointDef.prototype.Initialize = function(arg0, arg1) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  _emscripten_bind_b2MotorJointDef_Initialize_2(self, arg0, arg1);
+};;
+
+  b2MotorJointDef.prototype['get_linearOffset'] = b2MotorJointDef.prototype.get_linearOffset = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJointDef_get_linearOffset_0(self), b2Vec2);
+};
+    b2MotorJointDef.prototype['set_linearOffset'] = b2MotorJointDef.prototype.set_linearOffset = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_linearOffset_1(self, arg0);
+};
+  b2MotorJointDef.prototype['get_angularOffset'] = b2MotorJointDef.prototype.get_angularOffset = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJointDef_get_angularOffset_0(self);
+};
+    b2MotorJointDef.prototype['set_angularOffset'] = b2MotorJointDef.prototype.set_angularOffset = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_angularOffset_1(self, arg0);
+};
+  b2MotorJointDef.prototype['get_maxForce'] = b2MotorJointDef.prototype.get_maxForce = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJointDef_get_maxForce_0(self);
+};
+    b2MotorJointDef.prototype['set_maxForce'] = b2MotorJointDef.prototype.set_maxForce = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_maxForce_1(self, arg0);
+};
+  b2MotorJointDef.prototype['get_maxTorque'] = b2MotorJointDef.prototype.get_maxTorque = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJointDef_get_maxTorque_0(self);
+};
+    b2MotorJointDef.prototype['set_maxTorque'] = b2MotorJointDef.prototype.set_maxTorque = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_maxTorque_1(self, arg0);
+};
+  b2MotorJointDef.prototype['get_correctionFactor'] = b2MotorJointDef.prototype.get_correctionFactor = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJointDef_get_correctionFactor_0(self);
+};
+    b2MotorJointDef.prototype['set_correctionFactor'] = b2MotorJointDef.prototype.set_correctionFactor = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_correctionFactor_1(self, arg0);
+};
+  b2MotorJointDef.prototype['get_type'] = b2MotorJointDef.prototype.get_type = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJointDef_get_type_0(self);
+};
+    b2MotorJointDef.prototype['set_type'] = b2MotorJointDef.prototype.set_type = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_type_1(self, arg0);
+};
+  b2MotorJointDef.prototype['get_userData'] = b2MotorJointDef.prototype.get_userData = function() {
+  var self = this.ptr;
+  return _emscripten_bind_b2MotorJointDef_get_userData_0(self);
+};
+    b2MotorJointDef.prototype['set_userData'] = b2MotorJointDef.prototype.set_userData = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_userData_1(self, arg0);
+};
+  b2MotorJointDef.prototype['get_bodyA'] = b2MotorJointDef.prototype.get_bodyA = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJointDef_get_bodyA_0(self), b2Body);
+};
+    b2MotorJointDef.prototype['set_bodyA'] = b2MotorJointDef.prototype.set_bodyA = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_bodyA_1(self, arg0);
+};
+  b2MotorJointDef.prototype['get_bodyB'] = b2MotorJointDef.prototype.get_bodyB = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_b2MotorJointDef_get_bodyB_0(self), b2Body);
+};
+    b2MotorJointDef.prototype['set_bodyB'] = b2MotorJointDef.prototype.set_bodyB = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_bodyB_1(self, arg0);
+};
+  b2MotorJointDef.prototype['get_collideConnected'] = b2MotorJointDef.prototype.get_collideConnected = function() {
+  var self = this.ptr;
+  return !!(_emscripten_bind_b2MotorJointDef_get_collideConnected_0(self));
+};
+    b2MotorJointDef.prototype['set_collideConnected'] = b2MotorJointDef.prototype.set_collideConnected = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  _emscripten_bind_b2MotorJointDef_set_collideConnected_1(self, arg0);
+};
+  b2MotorJointDef.prototype['__destroy__'] = b2MotorJointDef.prototype.__destroy__ = function() {
+  var self = this.ptr;
+  _emscripten_bind_b2MotorJointDef___destroy___0(self);
+};
 (function() {
   function setupEnums() {
     
@@ -15239,6 +15839,8 @@ Module['b2RopeJointDef'] = b2RopeJointDef;
     Module['e_frictionJoint'] = _emscripten_enum_b2JointType_e_frictionJoint();
 
     Module['e_ropeJoint'] = _emscripten_enum_b2JointType_e_ropeJoint();
+
+    Module['e_motorJoint'] = _emscripten_enum_b2JointType_e_motorJoint();
 
     
 
